@@ -1,0 +1,200 @@
+/* pages/card/card.wxss */
+
+.swiper {
+    width: 750rpx;
+    height: 360rpx;
+}
+
+.swiper-item {
+    width: 665rpx;
+    height: 360rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-item image {
+    width: 665rpx;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100rpx;
+}
+
+.card-icon {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 20rpx;
+}
+
+.card-icon image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.card-name {
+    font-size: 35rpx;
+    color: #fff;
+}
+
+.card-num {
+    font-size: 30rpx;
+    color: #fff;
+    height: 60rpx;
+    border-radius: 20rpx;
+}
+
+.valid {
+    font-size: 26rpx;
+    color: #fff;
+}
+
+.container {
+    padding: 30rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.equity {
+    width: 690rpx;
+    height: 313rpx;
+    background-color: #fff;
+    border-radius: 6rpx;
+}
+
+.tit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.tit-l {
+    width: 44rpx;
+    height: 40rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.tit-l image {
+    width: 44rpx;
+    height: 24rpx;
+}
+
+.tit-r {
+    width: 44rpx;
+    height: 40rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.tit-r image {
+    width: 44rpx;
+    height: 24rpx;
+}
+
+.tit-c {
+    font-size: 32rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 40rpx;
+    letter-spacing: 0px;
+    color: #ff4729;
+    padding: 30rpx 18rpx;
+}
+
+.bt {
+    margin-top: 20rpx;
+}
+
+.card-info {
+    padding: 30rpx;
+}
+
+.info-item {
+    padding: 20rpx 0;
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 40rpx;
+    letter-spacing: 0px;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buy {
+    width: 690rpx;
+    height: 88rpx;
+    background-color: #fc5c59;
+    border-radius: 6rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 38rpx;
+    letter-spacing: 0rpx;
+    color: #fff;
+}
+
+.bottom {
+    width: 750rpx;
+    height: 124rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+}
+.eq-list{
+    width: 630rpx;
+    padding: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.eq-item-img {
+    /* background: url('http://group.zhengqi1995.com/%E5%BA%95%E5%9B%BE@2x.png');
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%;
+    background-size: 100%; */
+    background-color: #fff4f2;
+    border-radius: 50%;
+    width: 122rpx;
+	height: 122rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.eq-item-img image{
+    width: 62rpx;
+	height: 62rpx;
+}
+.eq-item-tit{
+    margin-top: 20rpx;
+    font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 40rpx;
+	letter-spacing: 0px;
+	color: #333333;
+}

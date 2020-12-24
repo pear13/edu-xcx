@@ -1,0 +1,159 @@
+<!--pages/orderinfo/orderinfo.wxml-->
+<view class="sublist">
+	<view class="right">
+		<image src="{{detail.sub.main[0]}}" mode="aspectFill"></image>
+	</view>
+	<view class="left">
+		<view class="title one-text">{{detail.list.name}}({{detail.sub.name}})</view>
+		<view class="flex-time">
+			<view class="time-icon">
+				<image src="/images/icon/time.png"></image>
+			</view>
+			<view class="time">{{detail.list.hour}}</view>
+		</view>
+		<view class="flex-time">
+			<view class="label-icon">
+				<image src="/images/icon/label-r.png"></image>
+			</view>
+			<view class="sorts">{{detail.sub.sort}}</view>
+		</view>
+	</view>
+</view>
+<view class="tch">
+	<view class="tch-tit">授课老师</view>
+	<view class="tch-row">
+		<view class="tch-ava">
+			<image src="{{detail.teacher.picture}}"></image>
+		</view>
+		<view class="tch-info">
+			<view class="tch-name">{{detail.teacher.name?detail.teacher.name:detail.teacher.wx_name}}</view>
+			<view class="tch-detai two-textl">{{detail.teacher.content?detail.teacher.content:''}}</view>
+		</view>
+	</view>
+</view>
+
+<view class="tch">
+	<view class="tch-tit">订单信息</view>
+	<view class="tch-row">
+		<view class="tch-info">
+			<view class="tch-name">开课类型：{{detail.team_type}}</view>
+			<view class="tch-name">开课时间：{{detail.time.date}} {{detail.time.start}}</view>
+
+		</view>
+	</view>
+</view>
+
+<view class="student">
+	<view class="student-tit">拼课同学</view>
+	<view class="student-flex">
+		<view class="student-item" catchtap="popstudent" data-id="1">
+			<view class="student-ava">
+				<image src="{{detail.user.avatar}}"></image>
+			</view>
+			<view class="student-name">{{detail.user.name?detail.user.name:detail.user.wx_name}}</view>
+			<view class="student-info two-text">{{detail.user.content?detail.user.content:''}}</view>
+		</view>
+		<view class="student-item" catchtap="popstudent" data-id="2">
+			<view class="student-ava">
+				<image src="{{detail.partner.avatar}}"></image>
+			</view>
+			<view class="student-name" wx:if="{{detail.partner.name ||detail.partner.wx_name}}">{{detail.partner.name?detail.partner.name:detail.partner.wx_name}}</view>
+			<view class="student-name" wx:else>等待加入</view>
+			<view class="student-info two-text">{{detail.partner.content?detail.partner.content:''}}</view>
+		</view>
+	</view>
+</view>
+<view class="bottom">
+	<view class="bottom-left">
+		<view class="bottom-tit">实付金额：</view>
+		<view class="num">{{detail.price}}课时</view>
+	</view>
+	<button class="pay" wx:if="{{detail.status==0}}" bindtap="drop">取消拼课</button>
+	<!-- <button class="pay" wx:if="{{detail.status==0 & detail.type_id==1}}">公开邀请中...</button>
+
+    <button class="pay" wx:if="{{detail.status==0 & detail.type_id==2}}">发出邀请</button> -->
+	<button class="pay" bindtap="drop" wx:if="{{detail.status==1}}">退课</button>
+	<button class="pay" wx:if="{{detail.status==5}}">已投诉</button>
+	<button class="pay" wx:if="{{detail.status==2}}">已完成</button>
+	<button class="pay" wx:if="{{detail.status==3}}">拼课失败</button>
+	<button class="pay" wx:if="{{detail.status==4}}">已退课</button>
+</view>
+
+<view class="yuding">
+	<view class="titless">VIP会员组队约课规则</view>
+	<view class="title-info">
+		<view class="spot">
+		</view>
+		<view class="title-info-text">
+			平台自动匹配组队约课：VIP会员根据外教发布的课程信息及时间，在平台自主约课，平台根据会员约课时间顺序自动匹配组队，约课之时即消耗1课时。组队成功至开课24之间如果有会员由于自身原因取消上课计划，可以退出组队并全额返还课时，平台根据候补组队请求人继续匹配组队。若开课前24小时内任意一方取消课程或者不能参加课程，课程照常进行，组队队员双方均不返还课时。
+		</view>
+	</view>
+	<view class="title-info">
+		<view class="spot">
+		</view>
+		<view class="title-info-text">
+			公开邀请组队约课：VIP会员根据外教发布的课程信息及时间，在平台公开发起组队上课邀请，消耗1课时，发起邀请时可设定期望组队同学的基本条件，公开邀请发布时间需提前开课时间48小时以上。其他VIP会员可以在组队邀请发布时刻至距离开课24小时之间可接受组队邀请，双方确认组队后，即视为合约成立，双方各消耗1课时。在发起人发出公开组队上课邀请时至开课前24小时之间，由于以下3种原因没有组队成功则视为约课失败，消耗课时全额返还给公开邀请组队发起人。
+			a.没有其他会员接受组队邀请
+			b.发起人不同意接受组队的会员组队;
+			c.发起人在没有成功组队之前由于自身原因取消上课计划；
+			若组队成功后任意一方取消课程或者不能参加课程，课程照常进行，组队队员双方均不返还课时。
+		</view>
+	</view>
+	<view class="title-info">
+		<view class="spot">
+		</view>
+		<view class="title-info-text">
+			特定邀请组队约课：VIP会员根据外教发布的课程信息及时间，向特定VIP会员发出组队上课邀请，邀请人消耗1.5课时，特定邀请发起时间需提前开课时间48小时以上。受邀请VIP会员可以在组队邀请收到时刻至距离开课24小时之间，可接受组队邀请，双方确认组队后，即视为合约成立，被邀请人消耗0.5课时。邀请人在特定邀请发出时至开课前24小时之间，由于没有人接受邀请或者已接受组队的被邀请人由于自身原因取消上课计划则视为组队失败，所消耗课时全额返还给邀请人和被邀请人。
+			若组队成功后取消课程或者不能参加课程，课时按照以下3种情况处理：
+			a.双方均取消课程或未参加课程，双方均不返还课时；
+			b.邀请人单方取消或未参加课程，被邀请人课程照常进行，双方均不返还课时；
+			c.被邀请人单方取消课程或未参加课程，被邀请人课程照常进行，邀请人返还0.5课时，被邀请人额外扣除0.5课时。
+		</view>
+	</view>
+</view>
+<view style="height:200rpx;"></view>
+<van-dialog id="van-dialog" />
+
+<van-popup show="{{ show }}" bind:click-overlay	="onClose" custom-style="height: 70%;width:80%" >
+
+<view class="stu" wx:if="{{popstudent==1}}">
+	<view class="stu-ava">
+		<image src="{{detail.user.avatar}}"></image>
+	</view>
+	<view class="stu-name">{{detail.user.name?detail.user.name:detail.user.wx_name}}</view>
+	<view class="stu-info">{{detail.user.sex?'男':'女'}} | {{detail.user.age}}岁 | {{detail.user.ocp?detail.user.ocp:'无'}}</view>
+	<view class="stu-sign">
+		<view class="stu-sign-icon">
+			<image src="/images/icon/book.png"></image>
+		</view>
+		<view class="stu-sign-info">
+			{{detail.user.sign?detail.user.sign:'该用户很懒，没有留下签名'}}
+		</view>
+	</view>
+	<view class="stu-detail">{{detail.user.content?detail.user.content:'该用户很懒，没有留下介绍'}}</view>
+	<view class="stu-detail">
+		<image wx:for="{{detail.user.image}}" mode="widthFix" src="{{item}}"></image>
+	</view>
+</view>
+
+<view class="stu" wx:if="{{popstudent==2}}">
+	<view class="stu-ava">
+		<image src="{{detail.partner.avatar}}"></image>
+	</view>
+	<view class="stu-name">{{detail.partner.name?detail.partner.name:detail.partner.wx_name}}</view>
+	<view class="stu-info">{{detail.partner.sex?'男':'女'}} | {{detail.partner.age}}岁 | {{detail.partner.ocp?detail.partner.ocp:'无'}}</view>
+	<view class="stu-sign">
+		<view class="stu-sign-icon">
+			<image src="/images/icon/book.png"></image>
+		</view>
+		<view class="stu-sign-info">
+			{{detail.partner.sign?detail.partner.sign:'该用户很懒，没有留下签名'}}
+		</view>
+	</view>
+	<view class="stu-detail">{{detail.partner.content?detail.partner.content:'该用户很懒，没有留下介绍'}}</view>
+	<view class="stu-detail">
+		<image wx:for="{{detail.partner.image}}" mode="widthFix" src="{{item}}"></image>
+	</view>
+</view>
+</van-popup>
+

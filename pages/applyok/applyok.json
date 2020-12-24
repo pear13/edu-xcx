@@ -1,0 +1,6 @@
+{
+"navigationBarTitleText": "申请结果",
+  "usingComponents": {
+    "check": "/components/check/check"
+  }
+}

@@ -1,0 +1,12 @@
+.con {
+    position: fixed;
+    bottom: 200rpx;
+    right: 40rpx;
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.con image {
+    width: 80rpx;
+    height: 80rpx;
+}

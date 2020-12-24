@@ -1,0 +1,26 @@
+/* pages/team/team.wxss */
+@import "/templates/spell/spell.wxss";
+
+.content {
+    padding: 30rpx;
+}
+
+.create {
+    width: 690rpx;
+    height: 90rpx;
+    background-color: #2f72c9;
+    border-radius: 45rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30rpx;
+    position: fixed;
+    bottom: 46rpx;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0px;
+    color: #fff;
+}

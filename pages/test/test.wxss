@@ -1,0 +1,9 @@
+/* pages/test/test.wxss */
+
+
+.name{
+    width: 100%;
+    color: red;
+    font-size: 100rpx;
+    text-align: center;
+}

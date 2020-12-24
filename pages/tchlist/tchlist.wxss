@@ -1,0 +1,242 @@
+/* pages/tchlist/tchlist.wxss */
+
+.pick {
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    width: 720rpx;
+    padding: 30rpx 0 200rpx 30rpx;
+    flex-wrap: wrap;
+}
+
+.list-tit {
+    width: 200rpx;
+    height: 60rpx;
+    background-color: #2f72c9;
+    border-radius: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 50rpx;
+    letter-spacing: 0px;
+    color: #fff;
+    margin-right: 30rpx;
+}
+
+.tch {
+    width: 330rpx;
+    height: 324rpx;
+    background-color: #fff;
+    border-radius: 6rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30rpx;
+    margin-bottom: 23rpx;
+}
+
+.avatar {
+    width: 86rpx;
+    height: 86rpx;
+    padding: 27rpx 0 24rpx 0;
+    border-radius: 50%;
+}
+
+.avatar image {
+    width: 86rpx;
+    height: 86rpx;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    padding-bottom: 13rpx;
+    letter-spacing: 0px;
+    color: #333;
+}
+
+.time {
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #333;
+}
+
+.order {
+    width: 214rpx;
+    height: 54rpx;
+    background-color: #e1e1e1;
+    border-radius: 27rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0px;
+    color: #2f72c9;
+    margin-top: 20rpx;
+}
+
+.act {
+    border: solid 2rpx #2f72c9;
+    background: #fff;
+    border-radius: 45rpx;
+}
+
+.bottom {
+    width: 690rpx;
+    height: 90rpx;
+    background-color: #2f72c9;
+    border-radius: 45rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30rpx;
+    position: fixed;
+    bottom: 46rpx;
+}
+
+.friend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.friend-r {
+    border-right: 1rpx solid #fff;
+}
+
+.icon {
+    width: 35rpx;
+    height: 33rpx;
+    margin-right: 14rpx;
+}
+
+.icon image {
+    width: 35rpx;
+    height: 33rpx;
+}
+
+.icons {
+    width: 41rpx;
+    height: 27rpx;
+    margin-right: 14rpx;
+}
+
+.icons image {
+    width: 41rpx;
+    height: 30rpx;
+}
+
+.fri-tit {
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #fff;
+}
+
+.popup {
+    width: 580rpx;
+    background-color: #fff;
+    border-radius: 30rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-item {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    height: 80rpx;
+    width: 361rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.pop-icon {
+    width: 36rpx;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16rpx;
+}
+
+.pop-icon image {
+    width: 36rpx;
+    height: 36rpx;
+}
+
+.pop-name {
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #333;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-tit {
+    font-size: 28rpx;
+    color: #333;
+    line-height: 80rpx;
+    margin-bottom: 5rpx;
+    border-bottom: 1rpx solid #d9d9d9;
+}
+
+.picker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-pick {
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #333;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-but {
+    width: 180rpx;
+    height: 60rpx;
+    font-size: 28rpx;
+    background-color: #2f72c9;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 20rpx 0;
+}

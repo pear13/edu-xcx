@@ -1,0 +1,11 @@
+<!--pages/dropok/dropok.wxml-->
+<view class="container">
+    <view class="icon">
+        <image src="/images/src/teamok.png"></image>
+    </view>
+    <view class="card">
+        <view class="card-t">退课成功，课时已返还至您的余额，请前往我的学习页面查看～</view>
+      
+    </view>
+    <view class="ok" bindtap="ok">知道了</view>
+</view>

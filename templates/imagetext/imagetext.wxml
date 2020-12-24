@@ -1,0 +1,21 @@
+<template name="imagetext">
+    <block wx:for="{{list}}" wx:for-item="list" wx:key="index">
+        <view class="imagetext">
+            <view class="text_welike_item_divider"></view>
+            <text wx:if="{{list.name}}" class="text_welike_item">{{list.name}}</text>
+            <block>
+                <view class="image_welike_item_divider"></view>
+                <block>
+                    <image mode="aspectFill" wx:if="{{list.image}}" class="image_welike_item" src="{{list.image}}"></image>
+                </block>
+                
+                <view class="text_welike_item_divider"></view>
+                <view class="image_welike_video">
+                    <video wx:if="{{list.video}}" class="image_welike_item" objectFit="fill" src="{{list.video}}"></video>
+                </view>
+
+            </block>
+        </view>
+    </block>
+    <view wx:if="{{nowBuy}}" style="height:97rpx"></view>
+</template>

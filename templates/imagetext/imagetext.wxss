@@ -1,0 +1,40 @@
+
+.text_welike_item_divider {
+    /* margin-left: 60rpx; */
+    margin: 0 auto;
+    height: 1rpx;
+    width: 91%;
+    margin-top: 6rpx;
+    background-color: rgb(224,224,224);
+}
+.text_welike_item {
+    color: #1a1a1a;
+    font-size: 28rpx;
+    padding-top: 31rpx;
+    padding-bottom: 29rpx;
+    margin-left: 28rpx;
+    margin-right: 50rpx;
+    line-height: 160%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    width: 90%;
+    word-wrap: break-word;
+}
+.image_welike_item {
+    width: 100%;
+    margin-bottom: 23rpx;
+}
+
+.image_welike_item_divider {
+    width: 100%;
+    margin-bottom: 23rpx;
+}
+
+
+.image_welike_video {
+    width: 100%;
+}
+.imagetext{
+    padding: 30rpx;
+  
+}

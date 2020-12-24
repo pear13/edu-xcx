@@ -1,0 +1,2 @@
+<!--components/bot/bot.wxml-->
+ <view class="bot" bindtap="bot">联系客服</view>

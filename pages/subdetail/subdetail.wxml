@@ -1,0 +1,39 @@
+<!--pages/subdetail/subdetail.wxml-->
+<!-- 轮播图 -->
+<import src="/templates/swiper/swiper.wxml" />
+<!-- 图文介绍 -->
+<import src="/templates/imagetext/imagetext.wxml" />
+<!-- 评价 -->
+<import src="/templates/comment/comment.wxml" />
+<view class="container">
+    <template is="swiper" data="{{images:info.main}}" />
+    <van-tabs active="{{ active }}" bind:change="onChange" color="#2f72c9">
+        <van-tab title="介绍">
+        <block wx:if="{{info.detail.length>0}}">
+            <template is="imagetext" data="{{list:info.detail}}" />
+            </block>
+              <view wx:else class="nodata">暂无介绍</view>
+        </van-tab>
+        <van-tab title="目录">
+        <view class="tit-time">
+            <view class="title">{{info.name}}</view>
+           
+            </view>
+            <view class="sort">
+                <view class="sort-item" wx:for="{{info.list}}" wx:key="{{item}}">
+                    <view class="sort-left">{{item.name}}</view>
+                    <view class="sort-right">
+                        <view class="price-min">{{item.price}}课时 | {{item.time}}min</view>
+                        <button class="sortbun" bindtap="buy" data-index="{{index}}" data-id="{{item.id}}">拼课</button>
+                    </view>
+                </view>
+            </view>
+        </van-tab>
+        <van-tab title="评价">
+            <block wx:if="{{info.comment.length>0}}">
+                <template is="comment" data="{{list:comment}}" />
+            </block>
+            <view wx:else class="nodata">暂无评价</view>
+        </van-tab>
+    </van-tabs>
+</view>

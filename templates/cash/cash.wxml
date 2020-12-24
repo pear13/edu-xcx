@@ -1,0 +1,76 @@
+<!-- 提现申请 -->
+<template name='apply'>
+    <view class="apply">
+        <view class="introduce">
+            <view class="icon">
+                <image mode="aspectFill" src="/templates/cash/icon/wallet.png"></image>
+            </view>
+            <view class="introduce-info">余额将提现到微信钱包</view>
+        </view>
+        <view class="main">
+            <view class="tit">提现课时(元)</view>
+            <view class="money">
+                <text style="font-size:52rpx">￥</text>{{ke}}</view>
+        </view>
+        <button class="cash" bindtap="cash">提现</button>
+    </view>
+</template>
+
+<!-- 审核中 -->
+<template name='inreview'>
+    <view class="inreview">
+        <view class="in-order">
+            <view class="in-id">{{outNo}}</view>
+            <view class="in-tit">提现中</view>
+        </view>
+        <view class="in-review">
+            <view class="in-money">提现课时 
+                <text class="in-color">{{kes}}</text>
+            </view>
+            <view class="in-date">{{created}}</view>
+        </view>
+    </view>
+</template>
+
+<!-- 提现成功 -->
+<template name='success'>
+    <view class="inreview">
+        <view class="in-order">
+            <view class="in-id">{{id}}</view>
+            <view class="in-tit">提现成功</view>
+        </view>
+        <view class="in-review">
+            <view class="in-money">提现课时 
+                <text class="in-color">{{kes}}</text>
+            </view>
+            <view class="in-date">{{created}}</view>
+        </view>
+    </view>
+</template>
+
+<!-- 提现失败 -->
+<template name="cashfail">
+    <van-collapse value="{{ activeNames }}"  >
+        <van-collapse-item name="{{index}}">
+            <van-icon name="question-o" />
+            <view slot="title">
+                <view class="inreviews">
+        <view class="in-orders">
+            <view class="in-id">{{outNo}}</view>
+            <view class="in-tit">提现失败</view>
+        </view>
+        <view class="in-review">
+            <view class="in-money">提现课时 ￥
+                <text class="in-color">{{kes}}</text>
+            </view>
+            <view class="in-date">{{created}}</view>
+        </view>
+    </view>
+            </view>
+            <view class="detail">
+                {{reason}}
+            </view>
+        </van-collapse-item>
+
+    </van-collapse>
+</template>

@@ -1,0 +1,62 @@
+<!--pages/teamdetail/teamdetail.wxml-->
+<!-- 轮播图 -->
+<import src="/templates/swiper/swiper.wxml" />
+<view class="container">
+	<template is="swiper" data="{{images:info.sub.main}}" />
+	<view class="main">
+		<view class="tit">
+			<view class="main-tit">{{info.sub.name}}</view>
+			<view class="main-label">两人团</view>
+		</view>
+		<view class="main-time">{{info.time.date}} {{info.time.start}} ~ {{info.time.end}}</view>
+	</view>
+	<view class="catalog">目录：{{info.list.name}}</view>
+	<van-tabs active="{{ active }}" bind:change="onChange" color="#2f72c9">
+		<van-tab title="TA的介绍">
+			<view class="stu">
+				<view class="stu-ava">
+					<image src="{{info.user.avatar}}"></image>
+				</view>
+				<view class="stu-name">{{info.user.name?info.user.name:info.user.wx_name}}</view>
+				<view class="stu-info">{{info.user.sex?'男':'女'}} | {{info.user.age}}岁 | {{info.user.ocp?info.user.ocp:'无'}}</view>
+				<view class="stu-sign">
+					<view class="stu-sign-icon">
+						<image src="/images/icon/book.png"></image>
+					</view>
+					<view class="stu-sign-info">
+						{{info.user.sign?info.user.sign:'该用户很懒，没有留下签名'}}
+					</view>
+				</view>
+				<view class="stu-detail">{{info.user.content?info.user.content:'该用户很懒，没有留下介绍'}}</view>
+				<view class="stu-detail">
+					<image wx:for="{{info.user.image}}" mode="widthFix" src="{{item}}"></image>
+				</view>
+			</view>
+		</van-tab>
+		<van-tab title="老师介绍">
+			<view class="tch">
+				<view class="tch-ava">
+					<image src="{{info.teacher.picture}}"></image>
+				</view>
+				<view class="tch-info">
+					<view class="tch-name">{{info.teacher.name?info.teacher.name:info.teacher.wx_name}}</view>
+					<view class="tch-score">学员评分：{{info.teacher.score}}分</view>
+				</view>
+			</view>
+			<view class="tch-container">
+				<view class="tch-cont">
+					<view class="tch-la"></view>
+					<view class="tch-cont-tit">自我介绍</view>
+				</view>
+				<view class="tch-content">{{info.teacher.content?info.teacher.content:'该用户很懒，没有留下介绍'}}
+				</view>
+				<view class="tch-content">
+					<image src="{{info.teacher.picture}}"></image>
+				</view>
+			</view>
+		</van-tab>
+	</van-tabs>
+	<button class="team" bindtap="team">立即组队</button>
+</view>
+
+<van-dialog id="van-dialog" />

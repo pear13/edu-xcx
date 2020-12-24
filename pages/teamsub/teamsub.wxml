@@ -1,0 +1,26 @@
+<!--pages/teamsub/teamsub.wxml-->
+<import src="/templates/sublist/sublist.wxml" />
+<van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="正在拼课">
+        <view class="container">
+            <block wx:if="{{list1.length>0}}">
+                <block wx:for="{{list1}}" wx:key="{{item}}">
+                    <template is="team" data="{{...item}}" />
+                </block>
+            </block>
+            <view class="nodata" wx:else>暂无数据</view>
+        </view>
+    </van-tab>
+    <van-tab title="拼课失败">
+        <view class="container">
+           <block wx:if="{{list2.length>0}}">
+                <block wx:for="{{list2}}" wx:key="{{item}}">
+                    <template is="team" data="{{...item}}" />
+                </block>
+            </block>
+            <view class="nodata" wx:else>暂无数据</view>
+        </view>
+    </van-tab>
+
+</van-tabs>
+<bot />

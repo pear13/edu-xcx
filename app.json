@@ -1,0 +1,61 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/spell/spell",
+        "pages/study/study",
+        "pages/my/my",
+        "pages/mytch/mytch",
+        "pages/detail/detail",
+        "pages/index/index",
+        "pages/login/login",
+        "pages/subdetail/subdetail",
+        "pages/tchlist/tchlist",
+        "pages/introduce/introduce",
+        "pages/card/card",
+        "pages/income/income",
+        "pages/company/company",
+        "pages/ordering/ordering",
+        "pages/orderinfo/orderinfo",
+        "pages/orderok/orderok",
+        "pages/partner/partner",
+        "pages/nowstudy/nowstudy",
+        "pages/teamsub/teamsub",
+        "pages/signup/signup",
+        "pages/apply/apply",
+        "pages/applyok/applyok",
+        "pages/team/team",
+        "pages/teaming/teaming",
+        "pages/teamdetail/teamdetail",
+        "pages/teamok/teamok",
+        "pages/tch/tch",
+        "pages/tsub/tsub",
+        "pages/tmy/tmy",
+        "pages/dropok/dropok",
+        "pages/complain/complain",
+        "pages/cfriend/cfriend",
+        "pages/video/video",
+        "pages/usercashout/usercashout",
+        "pages/friendlist/friendlist",
+        "pages/vappraise/vappraise",
+        "pages/test/test"
+    
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTitleText": "AECLUB",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F4F4F4",
+        "onReachBottomDistance": 25
+    },
+        "usingComponents": {
+            "van-rate": "/dist/rate/index",
+            "van-tabbar": "/dist/tabbar/index",
+            "van-tabbar-item": "/dist/tabbar-item/index",
+            "van-notify": "/dist/notify/index",
+            "bot":"/components/bot/bot",
+            "van-dialog": "/dist/dialog/index"
+        },
+
+    "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,12 @@
+<!--components/newgift/newgift.wxml-->
+<image bindtap="hoverNewcoupons" class="newcoupons-hover" hidden="{{flag}}" style="bottom: {{120+fit}}rpx;" src="image/new-user.png"></image>
+<view bindtap="hide" class="modal-box" hidden="{{hovercoupons}}">
+    <view class="modal-body">
+        <view class="modal-content">
+            <image bindtap="newCoupon" class="fenxiang" data-id="{{newcoupons.businessId}}" mode="widthFix" src="image/gift.png"></image>
+            <image bindtap="hide" class="knowBtnImg" src="image/close.png"></image>
+        </view>
+    </view>
+</view>
+
+<van-dialog id="van-dialog" />

@@ -1,0 +1,47 @@
+<!-- 课程评价 -->
+<template name="comment">
+    <view class="comment" wx:for="{{list}}" wx:key="{{item}}">
+        <view class="left">
+            <view class="c-src">
+                <image src="{{item.user[0].user.avatar}}"></image>
+            </view>
+            <view class="name-info">
+                <view class="name">{{item.user[0].user.wx_name}}</view>
+                <view class="info">
+                    <view class="star">
+                        教师评分：
+                        <van-rate value="{{ item.user[0].tch_star }}" size="13" readonly='true' color="#ff4729" />
+                    </view>
+                    <view class="star">
+                        教师评分：
+                        <van-rate value="{{ item.user[0].sub_star }}" size="13" readonly='true' color="#ff4729" />
+                    </view>
+                    <view class="content">{{item.user[0].comment}}</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="right" wx:if="{{item.user[1]}}">
+          <view class="right-name-info">
+                <view class="name">{{item.user[1].user.wx_name}}</view>
+                <view class="info">
+                    <view class="star">
+                        教师评分：
+                        <van-rate value="{{ item.user[1].tch_star }}" size="13" readonly='true' color="#ff4729" />
+                    </view>
+                    <view class="star">
+                        教师评分：
+                        <van-rate value="{{ item.user[1].sub_star }}" size="13" readonly='true' color="#ff4729" />
+                    </view>
+                    <view class="content">{{item.user[1].comment}}</view>
+                </view>
+            </view>
+            <view class="c-src">
+                <image src="{{item.user[1].user.avatar}}"></image>
+            </view>
+          
+        </view>
+        <!-- <view style="height:30rpx; background-color: #f4f4f4;"></view> -->
+        <view class="tch">老师回复：{{item.tch.comment}}</view>
+    </view>
+</template>

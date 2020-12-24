@@ -1,0 +1,15 @@
+<view class="m-login">
+  <image src='../../images/src/bk_login.png' class='u-bg'></image>
+  <view class='m-login-box'>
+    <image class='u-logo' src='../../images/src/bk_login.png'></image>
+    <view class='u-login-text'>AECLUB邀您完成微信授权以继续使用</view>
+  </view>
+
+
+  <button class="bun-login" bindgetphonenumber="getPhone" lang='zh_CN' openType="getPhoneNumber" >授权用户信息</button>
+
+
+
+  <view class='m-tips'>确认授权即表示您同意<text class='m-color'>《AECLUB服务协议》</text></view>
+
+</view>

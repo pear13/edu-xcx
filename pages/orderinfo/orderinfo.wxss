@@ -1,0 +1,354 @@
+/* pages/orderinfo/orderinfo.wxss */
+@import "../teamdetail/teamdetail.wxss";
+.stu{
+    max-width: 100%;
+    max-height: 100%;
+}
+.stu-detail  {
+    width: 80%;
+}
+.stu-detail image {
+    width: 100%;
+}
+.sublist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 25rpx;
+    background: #fff;
+    padding: 30rpx;
+}
+
+.right {
+    width: 205rpx;
+    height: 153rpx;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+}
+
+.right image {
+    width: 205rpx;
+    height: 153rpx;
+    border-radius: 10rpx;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.title {
+    max-width: 480rpx;
+    font-size: 32rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 50rpx;
+    letter-spacing: 0px;
+    color: #333;
+}
+
+.flex-time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-icon {
+    width: 22rpx;
+    height: 68rpx;
+    margin-right: 13rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-icon image {
+    width: 22rpx;
+    height: 22rpx;
+}
+
+.time {
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 50rpx;
+    letter-spacing: 0px;
+    color: #777;
+}
+
+.label-icon {
+    width: 14rpx;
+    line-height: 50rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 17rpx;
+}
+
+.label-icon image {
+    width: 14rpx;
+    height: 20rpx;
+}
+
+.sorts {
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 50rpx;
+    letter-spacing: 0px;
+    color: #d94034;
+}
+
+.tch {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: #fff;
+    padding: 30rpx;
+    width: 690rpx;
+    margin-top: 20rpx;
+}
+
+.tch-tit {
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 30rpx;
+    letter-spacing: 0px;
+    color: #333;
+    padding-bottom: 30rpx;
+}
+
+.tch-ava {
+ width: 123rpx;
+	height: 123rpx;
+    border-radius: 50%;
+	border: solid 3px #2f72c9;
+    margin-left: 34rpx;
+}
+
+.tch-ava image {
+ width: 123rpx;
+	height: 123rpx;
+    border-radius: 50%;
+}
+
+.tch-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 35rpx;
+    	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 38rpx;
+	letter-spacing: 0rpx;
+	color: #444444;
+}
+
+.tch-name {
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 68rpx;
+    letter-spacing: 0px;
+    color: #333;
+}
+
+.tch-detail {
+    width: 467rpx;
+    height: 63rpx;
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 38rpx;
+    letter-spacing: 0px;
+    color: #444;
+}
+.student-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.student {
+    margin-top: 42rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: #fff;
+    padding: 30rpx;
+    width: 690rpx;
+  margin-bottom: 20rpx;
+
+}
+
+.student-tit {
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 68prx;
+    letter-spacing: 0px;
+    color: #333;
+    padding: 0 0 30rpx 0;
+}
+
+.student-item {
+    width: 216rpx;
+    height: 300rpx;
+    background-color: #fff;
+    box-shadow: 0rpx 2rpx 20rpx 0rpx rgba(0, 0, 0, 0.1);
+    border-radius: 6rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 20rpx;
+}
+.student-ava{
+    width: 103rpx;
+	height: 103rpx;
+    border-radius: 50%;
+    margin-top: 27rpx;
+	border: solid 3rpx #2f72c9;
+}
+.student-ava image{
+     width: 103rpx;
+	height: 103rpx; 
+    border-radius: 50%;
+}
+.student-name{
+font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 38rpx;
+	letter-spacing: 0px;
+	color: #333333;
+     margin-top: 20rpx;
+}
+.student-info{
+    margin-top: 20rpx;
+	width: 167rpx;
+	height: 81rpx;
+	font-family: PingFang-SC-Regular;
+	font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 38rpx;
+	letter-spacing: 0px;
+	color: #666666;
+  
+}
+.bottom{
+    position: fixed;
+    bottom: 0;
+    padding: 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 690rpx;
+    background: #fff;
+}
+.bottom-left{
+     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;  
+}
+.bottom-tit{
+    	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 38rpx;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.num{
+    	font-family: PingFang-SC-Regular;
+	font-size: 30rpx;
+	font-weight: normal;
+	letter-spacing: 0px;
+	color: #d94034;
+}
+.pay{
+    width: 288rpx;
+	height: 74rpx;
+	background-color: #d94034;
+	border-radius: 37rpx;
+    	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 38rpx;
+	letter-spacing: 0px;
+	color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tch-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.yuding{
+    padding: 30rpx;
+    width: 690rpx;
+    padding-bottom: 200rpx;
+    background: #fff;
+   
+
+}
+
+.titless{
+    	font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 40rpx;
+	letter-spacing: 0rpx;
+	color: #333333;
+}
+.title-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 31rpx;
+    margin-bottom: 40rpx;
+}
+
+.title-info .spot {
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    background-color: #348ef4;
+    margin-top: 15rpx;
+    margin-right: 15rpx;
+}
+
+.title-info-text {
+    width: 649rpx;
+    font-family: PingFang-SC-Regular;
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 40rpx;
+    letter-spacing: 0px;
+    color: #444;
+}
+.spot-ash {
+    background-color: #a5a5a5;
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    margin-top: 15rpx;
+    margin-right: 15rpx;
+}

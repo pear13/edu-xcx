@@ -1,0 +1,160 @@
+<!--pages/apply/apply.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="container">
+
+        <!-- 姓名 -->
+        <view class="list-item">
+            <view class="list-text">
+                <view>用户昵称 Nick Name</view>
+                <view class="list-value">
+                    <input placeholder="请输入您的姓名" name="name" value="{{name}}" maxlength='20' />
+                </view>
+            </view>
+        </view>
+        <!-- 手机号码 -->
+        <view class="list-item">
+            <view class="list-text">
+                <view>手机号码 Phone Number</view>
+                <view class="list-value">
+                    <input placeholder="请输入您的电话号码" type="number" name="phone" value="{{phone}}" maxlength='20' />
+                </view>
+            </view>
+        </view>
+        <!-- 性别 -->
+        <view class="list-item">
+            <view class="list-text">
+                <view>性别 Gender</view>
+                <picker name="sex" bindchange="sexChange" value="{{index}}" range="{{sexs}}">
+                    <view class="list-right">
+                        <view class="sex-name" wx:if='{{sexs[sex_index]}}'>{{sexs[sex_index]}}</view>
+
+                        <view wx:else class="choise">
+                            <view class="cho-tit">请选择</view>
+                            <view class="cho-img">
+                                <image src="/images/arrow-down.png"></image>
+                            </view>
+                        </view>
+                    </view>
+                </picker>
+            </view>
+        </view>
+
+        <!-- 所在城市  -->
+        <view class="list-item">
+            <view class="list-text">
+                <view>所在城市 City</view>
+                <view class="list-value">
+                    <input placeholder="请输入您的所在城市" name="city" value="{{city}}" maxlength='20' />
+                </view>
+            </view>
+        </view>
+        <!-- 外语水平 -->
+        <view class="list-item">
+            <view class="list-text">
+                <view>外语水平 English Level</view>
+                <picker class="list-right" bindchange="wskChange" name="wsk" value="{{index}}" range="{{wsks}}" style="width:200rpx;">
+                    <view class="list-right">
+                        <view class="sex-name" wx:if="{{wsks[wsk_index]}}">{{wsks[wsk_index]}}</view>
+                        <view wx:else class="choise">
+                            <view class="cho-tit">请选择</view>
+                            <view class="cho-img">
+                                <image src="/images/arrow-down.png"></image>
+                            </view>
+                        </view>
+                    </view>
+
+                </picker>
+            </view>
+        </view>
+        <!-- 邮箱 -->
+        <view class="list-item">
+            <view class="list-text">
+                <view>邮箱Email/QQ/Skype</view>
+                <view class="list-value">
+                    <input placeholder="请输入您的邮箱" name="email" value="{{email}}" maxlength='20' />
+                </view>
+            </view>
+        </view>
+        <!-- 学历 -->
+        <view class="list-item">
+            <view class="list-text">
+                <view>学历 Diploma</view>
+                <picker class="list-right" bindchange="eduChange" name="edu" value="{{index}}" range="{{edus}}">
+                    <view class="list-right">
+                        <view class="sex-name" wx:if="{{edus[edu_index]}}">{{edus[edu_index]}}</view>
+                        <view wx:else class="choise">
+                            <view class="cho-tit">请选择</view>
+                            <view class="cho-img">
+                                <image src="/images/arrow-down.png"></image>
+                            </view>
+                        </view>
+                    </view>
+
+                </picker>
+            </view>
+        </view>
+
+        <!-- 是否有本地教师资格Teaching Certificate-->
+         <view class="list-item">
+            <view class="list-text">
+                <view>是否有本地教师资格Teaching Certificate</view>
+                <picker class="list-right" bindchange="tcertChange" name="tcert" value="{{index}}" range="{{tcerts}}" style="width:150rpx">
+                    <view class="list-right" >
+                        <view class="sex-name" wx:if="{{tcerts[tcert_index]}}">{{tcerts[tcert_index]}}</view>
+                        <view wx:else class="choise">
+                            <view class="cho-tit">请选择</view>
+                            <view class="cho-img">
+                                <image src="/images/arrow-down.png"></image>
+                            </view>
+                        </view>
+                    </view>
+
+                </picker>
+            </view>
+        </view>
+        <!-- 简介 -->
+        <view class="ts-image">
+            <view class="t-image">
+                <view class="list-tit brief src-w">学位证书AC</view>
+                <!-- 图片 -->
+                <view class="srclist src-w">
+
+                    <view class="img" wx:if="{{acert}}" bindtap="add" data-type="acert">
+                        <image mode="aspectFill" src="{{acert}}"></image>
+                    </view>
+
+                    <view class="img" bindtap="add" data-type="acert" wx:else>
+                        <image mode="aspectFill" src="/images/src/add.png"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="t-image">
+                <view class="list-tit brief src-w">个人照片Picture</view>
+                <!-- 图片 -->
+                <view class="srclist src-w">
+                  
+                        <view class="img" wx:if="{{picture}}" bindtap="add"data-type="picture">
+                            <image mode="aspectFill" src="{{picture}}"></image>
+                        </view>
+               
+                    <view class="img" wx:else bindtap="add" data-type="picture">
+                        <image mode="aspectFill" src="/images/src/add.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 个人简介 -->
+        <view class="brief-info">
+            <textarea placeholder="添加个人简介" name="content" placeholder-class="brief-p" auto-height value="{{content}}" />
+        </view>
+        <!-- 语言介绍 -->
+        <!-- 学位证书Academic Certificate -->
+
+        <!-- 十一、个人照片Picture（上传） -->
+
+        <button class="bottom" form-type="submit">申请成为教师</button>
+        <view class="sound-tit">个人语音介绍英文版</view>
+        <sound bind:sound='sound' />
+        <view style="height:200rpx;"></view>
+    </view>
+</form>

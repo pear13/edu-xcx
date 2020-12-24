@@ -1,0 +1,41 @@
+<!-- 拼课列表页 -->
+<template name="spell">
+    <button class="spell" form-type="submit"  bindtap="goteam" data-id="{{id}}" data-index="{{type_id}}">
+        <view class="main">
+            <image src="{{sub.main}}" mode="aspectFill"></image>
+        </view>
+        <view class="user">
+            <view class="avatar">
+                <image src="{{user.avatar}}" mode="aspectFill"></image>
+            </view>
+            <view class="user-info">
+                <view class="user-info-all"><text class="user-name">{{user.name?user.name:user.wx_name}}</text>{{user.sex?'男':'女'}} | {{user.age}}岁 | {{user.ocp?user.ocp:'暂无'}}</view>
+                <view class="user-sign">
+                    <view class="user-s-icon">
+                        <image src="/images/icon/sign.png"></image>
+                    </view>
+                    <view class="user-s-text">{{user.sign?user.sign:'该用户很懒，没有留下介绍'}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="title">
+            <view class="label">两人团</view>
+            <view class=" title-name ">{{list.name}} <text class="sub-m">({{sub.name}})</text></view>
+        </view>
+        <view class="time">
+            <view class="time-sort">07-24 14:00 | {{user.city}} | {{sub.sort_name}}</view>
+            <view class="time-sort">已拼{{list.sale}}次</view>
+        </view>
+        <view class="c-price">
+            <view class="price">{{list.price}}课时</view>
+            <view class="comment">
+                  <van-rate value="5" size="11" color="#ff4729" void-color="#eee" void-icon="star" readonly='true'/>
+                <view class="comment-f">{{teacher.score}}分</view>
+            </view>
+        </view>
+               <view class="guide-label">
+            <view class="label-list '{{labelcolor[index]}}'" wx:for="{{seach}}" wx:key="{{item}}">{{item.type}}：{{item.value}}</view>
+
+        </view>
+    </button>
+</template>

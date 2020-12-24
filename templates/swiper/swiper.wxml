@@ -1,0 +1,8 @@
+<!-- 全屏轮播图组件 -->
+<template name="swiper">
+<swiper autoplay="true" class="swiper">
+    <swiper-item wx:for="{{images}}" wx:key="{{item}}">
+        <image catchtap="preview" data-src="{{item}}" data-list="{{images}}" class="swiper-img" src="{{item}}" mode="aspectFill"></image>
+    </swiper-item>
+</swiper>
+</template>

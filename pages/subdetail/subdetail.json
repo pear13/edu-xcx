@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "课程详情",
+  "usingComponents": {
+    "van-rate": "/dist/rate/index",
+        "van-tab": "/dist/tab/index",
+        "van-tabs": "/dist/tabs/index",
+        "van-steps": "/dist/steps/index"
+  }
+}

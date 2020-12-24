@@ -1,0 +1,58 @@
+/* pages/dropok/dropok.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icon {
+    width: 204rpx;
+    height: 272rpx;
+    margin-top: 74rpx;
+    margin-left: 30rpx;
+}
+
+.icon image {
+    width: 204rpx;
+    height: 272rpx;
+}
+
+.card {
+    margin-top: 31rpx;
+    width: 610rpx;
+    padding-top: 50rpx;
+    height: 230rpx;
+    background-color: #fff;
+    border-radius: 8rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-t {
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 70rpx;
+    letter-spacing: 0px;
+    color: #333;
+    margin: 20rpx;
+}
+
+.ok {
+    margin-top: 44rpx;
+    width: 610rpx;
+    height: 90rpx;
+    background-color: #2f72c9;
+    border-radius: 45rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0px;
+    color: #fff;
+}

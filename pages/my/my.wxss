@@ -1,0 +1,228 @@
+/* pages/my/my.wxss */
+
+.top {
+    width: 750rpx;
+    height: 308rpx;
+    background-color: #fff;
+    border-top: 1rpx solid #d9d9d9;
+}
+
+.land {
+    color: #fff;
+    background: #ff4729;
+    width: 160rpx;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30rpx;
+    font-size: 27rpx;
+    margin: 30rpx 0;
+}
+
+.user {
+    padding: 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card {
+    background-image: url('http://group.zhengqi1995.com/%E4%BC%9A%E5%91%98%E5%8D%A1%E8%83%8C%E6%99%AF@2x.png');
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%;
+    background-size: 100%;
+    width: 750rpx;
+    /* margin-left: 30rpx; */
+    height: 120rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70rpx;
+}
+
+.avatar {
+    width: 118rpx;
+    height: 118rpx;
+    border-radius: 50%;
+    margin-right: 26rpx;
+    background-color: #e8e8e8;
+}
+
+.avatar image {
+    width: 118rpx;
+    height: 118rpx;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 30rpx;
+    line-height: 30rpx;
+    letter-spacing: 0px;
+    color: #333;
+}
+
+.card-icon {
+    width: 37rpx;
+    height: 46rpx;
+    margin-right: 19rpx;
+}
+
+.card-icon image {
+    width: 37rpx;
+    height: 46rpx;
+}
+
+.card-name {
+    font-size: 30rpx;
+    line-height: 40rpx;
+    color: #fff;
+}
+
+.buy {
+    width: 156rpx;
+    height: 54rpx;
+    background-color: #fff;
+    border-radius: 27rpx;
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0px;
+    color: #ff4729;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 70rpx;
+}
+
+.item {
+    background: #fff;
+    width: 690rpx;
+    height: 110rpx;
+    border-bottom: 1rpx #d9d9d9 solid;
+    padding: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-i {
+    background: #fff;
+    height: 110rpx;
+    border-bottom: 1rpx #d9d9d9 solid;
+    padding: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.vip {
+    width: 36rpx;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vip image {
+    width: 36rpx;
+    height: 26rpx;
+}
+
+.about {
+    width: 34rpx;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rpx;
+}
+
+.about image {
+    width: 34rpx;
+    height: 28rpx;
+}
+
+.contact {
+    width: 33rpx;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3rpx;
+}
+
+.contact image {
+    width: 33rpx;
+    height: 28rpx;
+}
+
+.info {
+    width: 30rpx;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6rpx;
+}
+
+.info image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.money {
+    width: 32rpx;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4rpx;
+}
+
+.money image {
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.list {
+    margin-top: 30rpx;
+    
+}
+
+.list-tit {
+    font-size: 30rpx;
+    margin-left: 18rpx;
+    letter-spacing: 0px;
+    color: #333;
+}
+
+.right-tit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.list-r {
+    width: 30rpx;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-r image {
+    width: 30rpx;
+    height: 30rpx;
+}

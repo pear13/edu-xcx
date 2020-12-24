@@ -1,0 +1,112 @@
+<!--pages/spell/spell.wxml-->
+
+<!-- 拼课列表 -->
+<import src="/templates/spell/spell.wxml" />
+<form catchsubmit="submitFormId" report-submit='true'>
+<view class="tab">
+    <view class="tab-item br" bindtap="filter" data-id="1">
+        <view class="tab-name {{filter_id==1?'acttab':'failtab'}}">{{sort_name}}</view>
+        <view class="tab-icons">
+            <image src="/images/icon/down-h.png"></image>
+        </view>
+    </view>
+    <view class="tab-item br {{filter_id==2?'acttab':'failtab'}}" bindtap="filter" data-id="2">
+        <view class="tab-name">开课时间</view>
+        <view class="tab-icons">
+            <image wx:if="{{sorting==0}}" src="/images/icon/down-h.png"></image>
+            <image wx:if="{{sorting==1}}" src="/images/icon/up-a.png"></image>
+            <image wx:if="{{sorting==2}}" src="/images/icon/down-a.png"></image>
+        </view>
+    </view>
+    <view class="tab-item " bindtap="filter" data-id="3">
+        <view class="tab-name">综合筛选</view>
+        <view class="tab-icons">
+            <image src="/images/icon/down-h.png"></image>
+        </view>
+    </view>
+</view>
+<view class="content">
+    <block wx:if="{{list.length>0}}">
+        <block wx:for="{{list}}" wx:key="{{item}}">
+            <template is="spell" data="{{...item,labelcolor}}" />
+        </block>
+    </block>
+    <view wx:else class="nodata">暂无拼课</view>
+</view>
+<view  style="height:200rpx;"></view>
+<!-- 搜索 -->
+<block wx:if="{{filter_id!=2}}">
+    <van-popup show="{{ show_filter }}" position="top" bind:close="onClose" custom-style="margin-top: 100rpx;width:690rpx; height:{{filter_id==3?'85%':'15%'}}; border-radius: 10rpx;">
+        <view class="filter">
+            <block wx:if="{{filter_id==3}}">
+                <scroll-view scroll-y style="height:75%">
+                    <view class="filter-t">性别</view>
+                    <view class="filter-list">
+                        <view bindtap="tapsex" wx:for="{{sex}}" wx:key="{{item}}" class="filter-item {{item.sec?'act':'fail'}}" data-index="{{index}}">
+                            {{item.value}}
+                        </view>
+
+                    </view>
+                    <view class="filter-t">年龄</view>
+                    <view class="filter-list">
+                        <view bindtap="tapage" data-index="{{index}}" wx:for="{{ages}}" wx:key="{{item}}" class="filter-item {{item.sec?'act':'fail'}}">
+                            {{item.value}}
+                        </view>
+
+                    </view>
+
+                    <view class="filter-t">职业</view>
+                    <view class="filter-list">
+                        <view bindtap="tapocc" data-index="{{index}}" wx:for="{{occ}}" wx:key="{{item}}" class="filter-item {{item.sec?'act':'fail'}}">
+                            {{item.value}}
+                        </view>
+
+                    </view>
+
+
+                    <view class="filter-t">学历</view>
+                    <view class="filter-list">
+                        <view bindtap="tapedu" data-index="{{index}}" wx:for="{{edu}}" wx:key="{{item}}" class="filter-item {{item.sec?'act':'fail'}}">
+                            {{item.value}}
+                        </view>
+
+                    </view>
+
+                    <view class="filter-t">英语水平</view>
+                    <view class="filter-list">
+                        <view bindtap="tapeng" data-index="{{index}}" wx:for="{{eng_level}}" wx:key="{{item}}" class="filter-item {{item.sec?'act':'fail'}}">
+                            {{item.value}}
+                        </view>
+
+                    </view>
+                </scroll-view>
+                <view class="rok">
+                <button class="reok" bindtap="reok">重置</button>
+                <button class="ok" bindtap="ok">确定</button>
+                </view>
+            </block>
+            <block wx:if="{{filter_id==1}}">
+                <scroll-view scroll-y style="height:{{filter_id==3?'75%':'15%'}}">
+                    <view class="filter-list" style="padding-top:30rpx;">
+                        <view bindtap="tapsort" wx:for="{{sort}}" wx:key="{{item}}" class="filter-item {{item.sec?'act':'fail'}}" data-index="{{index}}">
+                            {{item.name}}
+                        </view>
+
+                    </view>
+                </scroll-view>
+            </block>
+        </view>
+
+    </van-popup>
+</block>
+
+<van-dialog id="van-dialog" />
+<!-- 切换身份 -->
+
+<van-tabbar active="{{ tab_a }}" bind:change="tabChange" active-color="#4b72a4">
+    <van-tabbar-item wx:for="{{tablist}}" wx:key="{{item}}">
+        <image slot="icon" src="{{ item.icon }}" mode="aspectFit" />
+        <image slot="icon-active" src="{{ item.iactive }}" mode="aspectFit" /> {{item.text}}
+    </van-tabbar-item>
+</van-tabbar>
+</form>

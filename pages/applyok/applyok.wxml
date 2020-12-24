@@ -1,0 +1,19 @@
+<!--pages/applyok/applyok.wxml-->
+<view class="container">
+<view class="icon">
+<image src="/images/icon/apply.png"></image>
+</view>
+<block wx:if="{{status}}">
+<view class="text" wx:if="{{status==1}}">申请成功,待审核！</view>
+<view class="text" wx:if="{{status==2}}">未通过</view>
+<view class="text" wx:if="{{status==3}}">已通过</view>
+</block>
+<view class="text" wx:else>已提交审核！</view>
+</view>
+<view class="text" wx:if="{{status==2}}">{{cause}}</view>
+
+<!--   身份切换 -->
+<block wx:if="{{utype==2}}">
+<check />
+</block>
+<bot />

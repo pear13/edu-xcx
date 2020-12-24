@@ -1,0 +1,18 @@
+/* components/bot/bot.wxss */
+.bot{
+    width: 690rpx;
+height: 90rpx;
+background-color: #2f72c9;
+border-radius: 45rpx;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+position: fixed;
+bottom: 46rpx;
+font-size: 30rpx;
+color: #fff;
+margin-left: 30rpx;
+
+
+}

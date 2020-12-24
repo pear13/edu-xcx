@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "最近在学",
+    "usingComponents": {
+        "van-tab": "/dist/re-tab/index",
+        "van-tabs": "/dist/re-tabs/index"
+      
+    }
+}

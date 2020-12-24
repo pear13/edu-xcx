@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "我的课程",
+  "usingComponents": {
+            "van-tab": "/dist/re-tab/index",
+            "van-tabs": "/dist/re-tabs/index"
+  }
+}

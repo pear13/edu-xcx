@@ -1,0 +1,22 @@
+<!-- 拼接列表 -->
+
+<template name="rated">
+    <view class="rated">
+        <view class="top">
+            <view class="src">
+                <image src="" mode="aspectFill"></image>
+            </view>
+            <view class="info">
+                <view class="star">
+                    <view class="star-tit">教师评分</view>
+                    <van-rate value="{{ value }}" size="{{ 25 }}" color="#f44" void-color="#eee" void-icon="star" />
+                </view>
+                <view class="star">
+                    <view class="star-tit">综合评分</view>
+                    <van-rate value="{{ value }}" size="{{ 25 }}" color="#f44" void-color="#eee" void-icon="star" />
+                    <view class="content">收货吗哪吃的蔬菜</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

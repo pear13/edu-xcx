@@ -1,0 +1,6 @@
+{
+        "navigationBarTitleText": "AECLUB教师信息",
+  "usingComponents": {
+            "sound": "/components/sound/sound"
+  }
+}

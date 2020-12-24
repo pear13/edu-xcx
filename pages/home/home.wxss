@@ -1,0 +1,9 @@
+/* pages/home/home.wxss */
+@import "/templates/sublist/sublist.wxss";
+@import "/templates/cut/cut.wxss";
+.container{
+    margin: 0 30rpx;
+}
+.list{
+    margin-top: 30rpx;
+}

@@ -1,0 +1,128 @@
+<!-- 课程列表 -->
+<template name='sublist'>
+    <button form-type="submit" class="sublist">
+        <view class="right">
+            <image src="{{main}}" mode="aspectFill"></image>
+        </view>
+        <view class="left">
+            <view class="title one-text">{{name}}</view>
+            <view class="flex-time">
+                <view class="time-icon">
+                    <image src="/images/icon/time.png"></image>
+                </view>
+                <view class="time">{{hour}}</view>
+            </view>
+            <view class="flex-time">
+                <view class="label-icon">
+                    <image src="/images/icon/label-r.png"></image>
+                </view>
+                <view class="sorts">{{sort}}</view>
+            </view>
+        </view>
+    </button>
+</template>
+
+
+<!-- 拼课记录 -->
+<template name='team'>
+    <view class="sublist" bindtap="sub" data-id="{{id}}">
+        <view class="right">
+            <image src="{{sub.main}}" mode="aspectFill"></image>
+        </view>
+        <view class="left">
+            <view class="title one-text">{{list.name}}({{sub.name}})</view>
+            <view class="teams">
+                <view class="flex-time">
+                    <view class="time-icon">
+                        <image src="/images/icon/time.png"></image>
+                    </view>
+                    <view class="time">{{list.hour}}</view>
+                </view>
+                <button class="complain" wx:if="{{status<=1 && team_type==2}}" catchtap="goshare" data-index="{{index}}" data-id="{{id}}">发出邀请</button>
+                <block wx:else>
+                    <view class="fanhuan" wx:if="{{status==3}}">拼课失败</view>
+                    <view class="fanhuan" wx:if="{{status==4}}">退课成功</view>
+                    <view class="fanhuan" wx:if="{{status==6}}">已过期</view>
+                    <button class="contact" data-oid="{{oid}}" data-index="{{index}}" wx:if="{{status==2 && !ucmted}}" form-type="submit" catchtap="eval">评价</button>
+                </block>
+            </view>
+            <view class="flex-time">
+                <view class="label-icon">
+                    <image src="/images/icon/label-r.png"></image>
+                </view>
+                <view class="sorts one-text">{{sub.name}}</view>
+            </view>
+        </view>
+    </view>
+</template>
+
+<!-- 最近在学 -->
+<template name='lastlearn'>
+    <view class="lastlearn">
+        <view class="sublists" bindtap="sub" data-id="{{id}}">
+            <view class="right">
+                <image src="{{sub.main}}" mode="aspectFill"></image>
+            </view>
+            <view class="left">
+                <view class="title one-text">{{list.name}}({{sub.name}})</view>
+                <view class="flex-time">
+                    <view class="time-icon">
+                        <image src="/images/icon/time.png"></image>
+                    </view>
+                    <view class="time">{{list.hour}}</view>
+                </view>
+                <view class="flex-time">
+                    <view class="label-icon">
+                        <image src="/images/icon/label-r.png"></image>
+                    </view>
+                    <view class="sorts_time" wx:if="{{status==1}}">开课时间：{{time.date}} {{time.start}}</view>
+                    <view class="sorts_time" wx:else>已投诉，稍后会有客服联系您处理</view>
+                </view>
+            </view>
+        </view>
+        <view class="lastbun">
+            <button class="complain" wx:if="{{status==1}}" catchtap="complain" data-index="{{index}}" data-id="{{id}}">投诉</button>
+            <button class="complain" wx:if="{{complain.status==1}}" catchtap="reason" data-status="{{complain.status}}" data-msg="{{complain.reason}}" data-id="{{id}}">查看结果</button>
+            <view class="fanhuan" wx:if="{{complain.status==2}}">已返还课时</view>
+            <button class="classok" wx:if="{{status==1}}" catchtap="classok" data-index="{{index}}" data-id="{{id}}">确认上课</button>
+        </view>
+    </view>
+</template>
+
+
+
+
+<!-- 教师课程 -->
+<template name='tchclass'>
+    <view class="tchclass">
+        <view class="sublists" wx:for="{{item}}" bindtap="sub" data-id="{{id}}">
+            <view class="right">
+                <image src="{{item.sub.main}}" mode="aspectFill"></image>
+            </view>
+            <view class="left">
+                <view class="title one-text">{{item.list.name}}({{item.sub.name}})</view>
+                <view class="flex-time">
+                    <view class="time-icon">
+                        <image src="/images/icon/time.png"></image>
+                    </view>
+                    <view class="time">{{item.list.hour}}</view>
+                </view>
+                <view class="flex-time">
+                    <view class="label-icon">
+                        <image src="/images/icon/label-r.png"></image>
+                    </view>
+                    <view class="sorts_time" wx:if="{{item.status==1}}">开课时间：{{item.time.date}} {{item.time.start}}</view>
+                    <view class="sorts_time" wx:else>已完成</view>
+                </view>
+            </view>
+        </view>
+        
+        <view class="lastbun">
+            <button class="contact" wx:if="{{item[0].status==2 & !item[0].tcmted }}" data-oid="{{item[0].oid}}" data-index="{{index}}" form-type="submit" catchtap="eval">评价</button>
+            <block wx:else>
+            <view class="fanhuans" wx:if="{{item[1].list.price}}">$ {{item[0].list.price+item[1].list.price}}课时</view>
+              <view class="fanhuans" wx:else>$ {{item[0].list.price}}课时</view>
+     </block>
+        </view>
+    </view>
+</template>

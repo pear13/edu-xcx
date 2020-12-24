@@ -1,0 +1,54 @@
+<!--pages/ordering/ordering.wxml-->
+<view class="sublist">
+    <view class="right">
+        <image src="{{detail.title.main}}" mode="aspectFill"></image>
+    </view>
+    <view class="left">
+        <view class="title one-text">{{detail.title.name}}</view>
+        <view class="flex-time">
+            <view class="time-icon">
+                <image src="/images/icon/time.png"></image>
+            </view>
+            <view class="time">{{detail.title.title}}</view>
+        </view>
+        <view class="flex-time">
+            <view class="label-icon">
+                <image src="/images/icon/label-r.png"></image>
+            </view>
+            <view class="sorts">{{detail.title.sort}}</view>
+        </view>
+    </view> 
+</view>
+<view class="tch">
+    <view class="tch-tit">授课老师</view>
+    <view class="tch-row">
+    <view class="tch-ava">
+        <image src="{{detail.tch.avatar}}"></image>
+    </view>
+    <view class="tch-info">
+        <view class="tch-name">{{detail.tch.name}}</view>
+        <view class="tch-detai two-textl">{{detail.tch.content}}</view>
+    </view>
+    </view>
+</view>
+
+<view class="student">
+    <view class="student-tit">拼课同学</view>
+    <view class="student-flex">
+    <view class="student-item" wx:for="{{detail.user}}" wx:key="{{item}}">
+        <view class="student-ava">
+            <image src="{{item.avatar}}"></image>
+        </view>
+        <view class="student-name">{{item.name}}</view>
+        <view class="student-info two-text">{{item.content}}</view>
+    </view>
+    </view>
+</view>
+<view class="bottom">
+    <view class="bottom-left">
+        <view class="bottom-tit">实付金额：</view>
+        <view class="num">{{detail.title.price}}课时</view>
+    </view>
+    <button class="pay" bindtap="pay">立即支付</button>
+</view>
+<van-dialog id="van-dialog" />

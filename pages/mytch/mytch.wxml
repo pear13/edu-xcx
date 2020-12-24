@@ -1,0 +1,53 @@
+<!--pages/partner/partner.wxml-->
+
+<view class="list">
+	<view class="list-item" wx:for="{{list}}" wx:key="{{item}}" bindtap="look" data-index="{{index}}">
+		<view class="left">
+			<view class="avatar">
+				<image src="{{item.avatar}}"></image>
+			</view>
+			<view class="info">
+				<view class="info-tit">
+					<text class="info-name">{{item.name}}</text> {{item.sex?'男':'女'}} | {{item.age}}岁 | {{item.ocp}}
+				</view>
+				<view class="info-sign">
+					<view class="info-icon">
+						<image src="/images/icon/sign.png"></image>
+					</view>
+					<view class="sign">{{item.sign}}</view>
+				</view>
+			</view>
+		</view>
+	
+	</view>
+
+
+</view>
+
+
+<van-popup show="{{ show }}" bind:click-overlay	="onClose" custom-style="height: 70%;width:80%" >
+
+<view class="stu" >
+	<view class="stu-ava">
+		<image src="{{list[index].avatar}}"></image>
+	</view>
+	<view class="stu-name">{{list[index].name?list[index].name:list[index].wx_name}}</view>
+	<view class="stu-info">{{list[index].sex?'男':'女'}} | {{list[index].age}}岁 | {{list[index].ocp?list[index].ocp:'无'}}</view>
+	<view class="stu-sign">
+		<view class="stu-sign-icon">
+			<image src="/images/icon/book.png"></image>
+		</view>
+		<view class="stu-sign-info">
+			{{list[index].sign?list[index].sign:'该用户很懒，没有留下签名'}}
+		</view>
+	</view>
+	<view class="stu-detail">{{list[index].content?list[index].content:'该用户很懒，没有留下介绍'}}</view>
+	<view class="stu-detail">
+		<image wx:for="{{list[index].image}}" mode="widthFix" src="{{item}}"></image>
+	</view>
+</view>
+
+
+</van-popup>
+
+<van-dialog id="van-dialog" />

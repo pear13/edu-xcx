@@ -1,0 +1,60 @@
+<!--pages/income/income.wxml-->
+<import src="/templates/cash/cash.wxml" />
+
+<van-tabs active="{{ tab }}" bind:change="tab" color="#348ef4" tab-active-class="tab-active-class">
+    <van-tab title="提现申请">
+        <template is="apply" data="{{ke}}" />
+    </van-tab>
+    <van-tab title="审核中">
+        <block wx:if="{{inreview.length>0}}">
+            <view wx:for="{{inreview}}" wx:key="{{item}}">
+                <template is="inreview" data="{{...item}}" />
+            </view>
+        </block>
+        <view wx:else class="nodata">暂无审核中的订单</view>
+    </van-tab>
+    <van-tab title="提现成功">
+        <block wx:if="{{success.length>0}}">
+            <view wx:for="{{success}}" wx:key="{{item}}">
+                <template is="success" data="{{...item}}" />
+            </view>
+        </block>
+        <view wx:else class="nodata">暂无数据</view>
+
+    </van-tab>
+    <van-tab title="提现失败">
+        <block wx:if="{{cashfail.length>0}}">
+            <view wx:for="{{cashfail}}" wx:key="{{item}}">
+                <!-- <template is="cashfail" data="{{...item,activeNames,index}}" /> -->
+                <!-- 提现失败 -->
+                <van-collapse value="{{ activeNames }}"  bind:change="onChanges">
+                    <van-collapse-item name="{{index}}">
+                        <van-icon name="question-o" />
+                        <view slot="title">
+                            <view class="inreviews">
+                                <view class="in-orders">
+                                    <view class="in-id">{{item.outNo}}</view>
+                                    <view class="in-tit">提现失败</view>
+                                </view>
+                                <view class="in-review">
+                                    <view class="in-money">提现课时 
+                                        <text class="in-color">{{item.kes}}</text>
+                                    </view>
+                                    <view class="in-date">{{item.created}}</view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="detail">
+                            {{item.reason}}
+                        </view>
+                    </van-collapse-item>
+
+                </van-collapse>
+
+            </view>
+        </block>
+        <view wx:else class="nodata">暂无数据</view>
+
+
+    </van-tab>
+</van-tabs>

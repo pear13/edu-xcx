@@ -1,0 +1,34 @@
+<!--pages/tch/tch.wxml-->
+<view class="weeks">
+    <view class="week">
+        <view class="week-item" wx:for="{{week}}" wx:key="{{item}}">{{item}}</view>
+    </view>
+    <swiper class="week">
+        <swiper-item class="week" wx:for="{{dates}}" wx:key="item" wx:for-index="ins">
+            <view class="week-item  {{day.week?'':'day_pass'}} " wx:for="{{item}}" wx:for-item="day" wx:key="index" bindtap="day" data-item="{{day}}" data-ins="{{ins}}" data-index="{{index}}">
+
+                <view class="{{day.cho?'day_s':''}}">{{day.day}}</view>
+                <view class="{{indexs===index && inss===ins && day.cho?'day_sec':''}}"></view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>
+
+<scroll-view scroll-y class="time" style="height:{{height}}px">
+    <view class="time-list" wx:for="{{times}}" wx:key="item">
+        <view class="time-tit">
+            {{item.start}}-{{item.end}} </view>
+        <view class="time-icon {{item.sec?'act':''}}" bindtap="sec" data-index="{{index}}">
+        </view>
+    </view>
+</scroll-view>
+
+<view class="check" bindtap="ok">
+保存
+</view>
+<van-tabbar active="{{ tab_a }}" bind:change="tabChange" active-color="#4b72a4">
+    <van-tabbar-item wx:for="{{tablist}}" wx:key="{{item}}">
+        <image slot="icon" src="{{ item.icon }}" mode="aspectFit" />
+        <image slot="icon-active" src="{{ item.iactive }}" mode="aspectFit" /> {{item.text}}
+    </van-tabbar-item>
+</van-tabbar>

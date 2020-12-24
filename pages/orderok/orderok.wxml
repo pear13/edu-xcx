@@ -1,0 +1,10 @@
+<!--pages/orderok/orderok.wxml-->
+<form catchsubmit="submitFormId" report-submit='true'>
+<view class="container">
+<view class="icon">
+<image src="/images/orderok.png"></image>
+</view>
+<view class="pay">支付成功</view>
+<button class="bun" bindtap="bun" form-type="submit">查看订单</button>
+</view>
+</form>

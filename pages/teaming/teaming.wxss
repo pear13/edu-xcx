@@ -1,0 +1,42 @@
+/* pages/teaming/teaming.wxss */
+
+.title {
+    width: 389rpx;
+    height: 86rpx;
+    font-family: PingFang-SC-Medium;
+    font-size: 32rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 56rpx;
+    letter-spacing: 0px;
+    color: #333;
+    margin: 0 184rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.team {
+    width: 204rpx;
+    height: 272rpx;
+    margin: 77rpx 289rpx 51rpx 257rpx;
+}
+
+.team image {
+    width: 204rpx;
+    height: 272rpx;
+}
+.go{
+    width: 150rpx;
+    height: 70rpx;
+    font-size: 26rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  #2f72c9;
+    color: #fff;
+    border-radius: 10rpx;
+    margin-left: 300rpx;
+    margin-top: 60rpx;
+}

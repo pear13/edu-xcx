@@ -1,0 +1,170 @@
+/* pages/usercashout/usercashout.wxss */
+.apply {
+    padding: 30rpx;
+}
+
+.introduce {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60rpx;
+    /* justify-content: center; */
+}
+
+.icon {
+    width: 25rpx;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 14rpx;
+}
+
+.icon image {
+    width: 25rpx;
+    height: 25rpx;
+}
+
+.introduce-info {
+    font-family: PingFang-SC-Regular;
+    font-size: 24rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #348ef4;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tit {
+    font-family: PingFang-SC-Regular;
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #444;
+}
+
+.money {
+    font-family: PingFang-SC-Regular;
+    font-size: 42rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #333;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 690rpx;
+    height: 193rpx;
+    background-color: #fff;
+    border-radius: 4rpx;
+    padding-left: 30rpx;
+}
+
+.cash {
+    margin-top: 50rpx;
+    width: 690rpx;
+    height: 88rpx;
+    background-color: #348ef4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rpx;
+    font-family: PingFang-SC-Medium;
+    font-size: 32rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0px;
+    color: #fff;
+}
+
+.inreview {
+    width: 690rpx;
+    height: 143rpx;
+    background-color: #fff;
+    border-radius: 4rpx;
+    margin: 20rpx 30rpx 0 30rpx;
+}
+.in-orders{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+padding:0 30rpx 20rpx 30rpx;
+
+}
+
+.in-tit {
+    font-family: PingFang-SC-Regular;
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #666;
+}
+
+.in-id {
+    font-family: PingFang-SC-Regular;
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0rpx;
+    color: #999;
+}
+
+.in-order {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20rpx 30rpx;
+}
+
+.in-money {
+    font-family: PingFang-SC-Regular;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #444;
+}
+
+.in-color {
+    font-size: 32rpx;
+    font-weight: normal;
+    letter-spacing: 0px;
+    color: #ff6a19;
+}
+
+.in-date {
+    font-family: PingFang-SC-Regular;
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #999;
+}
+
+.in-review {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30rpx;
+}
+.detail{
+    font-family: PingFang-SC-Regular;
+	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 38rpx;
+	letter-spacing: 0rpx;
+	color: #666666;
+}

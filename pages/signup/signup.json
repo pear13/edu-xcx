@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "报名记录",
+    "usingComponents": {
+        "van-tab": "/dist/re-tab/index",
+        "van-tabs": "/dist/re-tabs/index"
+    }
+}

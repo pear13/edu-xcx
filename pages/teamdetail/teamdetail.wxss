@@ -1,0 +1,235 @@
+/* pages/teamdetail/teamdetail.wxss */
+@import "/templates/swiper/swiper.wxss";
+
+.main {
+    width: 690rpx;
+    /* height: 140rpx; */
+    background-color: #fff;
+    margin-bottom: 20rpx;
+    padding: 0 30rpx 20rpx 30rpx;
+}
+
+.tit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30rpx 0 27rpx 0;
+}
+
+.main-label {
+    width: 80rpx;
+    height: 33rpx;
+    background-color: #2f72c9;
+    border-radius: 4rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0px;
+    color: #fff;
+    margin-left: 20rpx;
+}
+
+.main-time {
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0rpx;
+    color: #444;
+}
+
+.main-tit {
+    font-size: 32rpx;
+    color: #333;
+}
+
+.catalog {
+    width: 690rpx;
+    height: 90rpx;
+    background-color: #fff;
+    padding: 0 30rpx;
+    font-size: 30rpx;
+    line-height: 90rpx;
+    color: #333;
+    margin-bottom: 20rpx;
+}
+.stu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fff;
+        padding-bottom: 200rpx;
+}
+.stu-ava{
+    	width: 120rpx;
+	height: 120rpx;
+    border-radius: 50%;
+    margin-top: 30rpx;
+}
+.stu-ava image{
+        	width: 120rpx;
+	height: 120rpx;
+    border-radius: 50%;
+}
+.stu-name{
+    	font-size: 28rpx;
+    margin: 20rpx 0;
+	color: #333333;
+}
+.stu-info{
+    	font-size: 26rpx;
+margin-bottom: 10rpx;
+	color: #666666;
+}
+.stu-sign{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30rpx;
+}
+.stu-sign-icon{
+    width: 26rpx;
+	height: 40rpx;
+    margin-right: 15rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stu-sign-icon image{
+     width: 26rpx;
+	height: 20rpx;  
+}
+
+.stu-sign-info{
+      	font-size: 24rpx;
+    line-height: 40rpx;
+	color: #666666;  
+}
+.stu-detail{
+    width: 650rpx;
+    padding: 30rpx;
+	background-color: #f3f3f3;
+	border-radius: 6rpx;
+     	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 40rpx;
+	letter-spacing: 0px;
+	color: #444444;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+.stu-detail image{
+        width: 650rpx;
+}
+.tch {
+    width: 750rpx;
+    min-height: 256rpx;
+    background-image: linear-gradient(-90deg, #61b7e9 0%, #7a97e1 100%),
+                      linear-gradient(#2f72c9, #2f72c9);
+    background-blend-mode: normal, normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+.tch-ava {
+    width: 122rpx;
+    height: 122rpx;
+    border: solid 3rpx #fff;
+    border-radius: 50%;
+    margin-left: 74rpx;
+}
+
+.tch-ava image {
+    width: 122rpx;
+    height: 122rpx;
+    border-radius: 50%;
+}
+
+.tch-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 32rpx;
+}
+
+.tch-name {
+    font-size: 32rpx;
+    color: #fff;
+}
+
+.tch-score {
+    font-size: 26rpx;
+    color: #fff;
+}
+
+.tch-container {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+       padding-bottom: 200rpx;
+}
+
+.tch-cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 30rpx;
+}
+
+.tch-la {
+    width: 8rpx;
+    height: 36rpx;
+    background-color: #2f72c9;
+    border-radius: 4rpx;
+    margin-right: 21rpx;
+}
+
+.tch-cont-tit {
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 80rpx;
+    letter-spacing: 0px;
+    color: #333;
+}
+
+.tch-content {
+    width: 690prx;
+    padding: 0 30rpx 30rpx 30rpx;
+    font-family: PingFang-SC-Regular;
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 40rpx;
+    letter-spacing: 0px;
+    color: #666;
+}
+.team{
+    width: 750rpx;
+	height: 88rpx;
+	background-color: #2f72c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    	font-size: 32rpx;
+
+	color: #ffffff;
+    position: fixed;
+    bottom: 0;
+}

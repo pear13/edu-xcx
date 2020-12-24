@@ -1,0 +1,38 @@
+/* pages/orderok/orderok.wxss */
+page{
+    background: #fff;
+}
+.icon{
+    width: 150rpx;
+    height: 150rpx;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100rpx;
+}
+.icon image{
+       width: 120rpx;
+    height: 120rpx; 
+}
+.bun{
+    background-color: #348ef4;
+    width: 200rpx;
+    height: 80rpx;
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30rpx;
+    color: #fff;
+    margin-top: 100rpx;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.pay{
+    color: #348ef4;
+    font-size: 38rpx;
+}

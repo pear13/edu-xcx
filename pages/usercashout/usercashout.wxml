@@ -1,0 +1,16 @@
+<!--pages/usercashout/usercashout.wxml-->
+<view class="apply">
+        <view class="introduce">
+            <view class="icon">
+                <image mode="aspectFill" src="/templates/cash/icon/wallet.png"></image>
+            </view>
+            <view class="introduce-info">余额将提现到微信钱包</view>
+        </view>
+        <view class="main">
+            <view class="tit">提现金额(元)</view>
+            <view class="money">
+                <text style="font-size:52rpx">￥</text>{{beout}}</view>
+        </view>
+        <button class="cash" bindtap="cash">提现</button>
+    </view>
+<bot />

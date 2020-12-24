@@ -1,0 +1,209 @@
+<template name="introduce">
+    <view class="icon">
+        <view class="tx">
+            <image wx:if="{{avatar}}" mode="aspectFill" src="{{avatar}}"></image>
+            <image wx:else mode="aspectFill" src="/images/logo.png"></image>
+        </view>
+        <view class="update" catchtap="update">更换头像</view>
+    </view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="list">
+            <!-- 姓名 -->
+            <view class="list-item">
+                <view class="list-text">
+                    <view class="list-tit">姓名</view>
+                    <view class="list-value">
+                        <input placeholder="请输入姓名" name="name" value="{{name}}" maxlength='20' />
+                    </view>
+                </view>
+            </view>
+            <!-- 性别 -->
+            <view class="list-item">
+                <view class="list-text">
+                    <view class="list-tit">性别</view>
+                    <picker name="sex" bindchange="sexChange" value="{{index}}" range="{{sexs}}">
+                        <view class="list-right">
+                            <view class="sex-name" wx:if='{{sex}}'>男</view>
+                            <view class="sex-name" wx:else>女</view>
+                            <!-- <image wx:else src="/images/icon/right.png"></image> -->
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <!-- 年龄/出生日期 -->
+            <view class="list-item">
+                <view class="list-text">
+                    <view class="list-tit">出生日期</view>
+                    <picker name="date" mode="date" value="{{date}}" bindchange="dateChange">
+                        <view class="list-right">
+                            <view class="sex-name" wx:if="{{birth}}">{{birth}}</view>
+                            <image wx:else mode="aspectFill" src="/images/icon/right.png"></image>
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <!-- 联系电话 -->
+            <view class="list-item">
+                <view class="list-text">
+                    <view class="list-tit">联系电话</view>
+                    <view class="list-value">
+                        <input placeholder="请输入联系方式" type="number" name="iphone" value="{{phone}}" />
+                    </view>
+                </view>
+            </view>
+            <!-- 微信号 -->
+            <view class="list-item">
+                <view class="list-text">
+                    <view class="list-tit">微信号</view>
+                    <view class="list-value">
+                        <input placeholder="请输入您的微信号" name="wx_num" value="{{wx_num}}" />
+                    </view>
+                </view>
+            </view>
+            <!-- 职业 -->
+            <view class="list-item">
+                <view class="list-text">
+                    <view class="list-tit">职业</view>
+                    <picker name="ocp" bindchange="ocpChange" value="{{index}}" range="{{o}}">
+                        <view class="list-right">
+                            <view class="sex-name" wx:if="{{ocp}}">{{o[ocp]}}</view>
+                            <view wx:else class="choise">
+                                <view class="cho-tit">请选择</view>
+                                <view class="cho-img">
+                                    <image src="/images/arrow-down.png"></image>
+                                </view>
+                            </view>
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <!-- 签名 -->
+            <view class="list-item">
+                <view class="list-text">
+                    <view class="list-tit">签名</view>
+                    <view class="list-value list-sign">
+                        <textarea class="list-sign" name="sign" auto-height placeholder="请输入您的签名" bindinput="sign" value="{{sign}}" />
+                    </view>
+                </view>
+            </view>
+            <!-- 行业 -->
+            <view class="list-item">
+                <view class="list-text">
+                    <view class="list-tit">行业</view>
+
+                    <picker class="list-right" bindchange="ocpChange" name="industry" value="{{index}}" range="{{ind}}">
+                        <view class="list-right">
+                            <view class="sex-name" wx:if="{{ind[industry]}}">{{ind[industry]}}</view>
+                            <view wx:else class="choise">
+                                <view class="cho-tit">请选择</view>
+                                <view class="cho-img">
+                                    <image src="/images/arrow-down.png"></image>
+                                </view>
+                            </view>
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <!-- 邮箱 -->
+            <view class="list-item">
+                <view class="list-text">
+                    <view class="list-tit">邮箱</view>
+                    <view class="list-value">
+                        <input placeholder="请输入您的邮箱" name="mail" value="{{mail}}" />
+                    </view>
+                </view>
+            </view>
+            <!-- 外语水平 -->
+            <view class="list-item">
+                <view class="list-text">
+                    <view class="list-tit">外语水平</view>
+                    <picker class="list-right" bindchange="wskChange" name="wsk" value="{{index}}" range="{{wsks}}">
+                        <view class="list-right">
+                            <view class="sex-name" wx:if="{{wsks[wsk]}}">{{wsks[wsk]}}</view>
+                            <view wx:else class="choise">
+                                <view class="cho-tit">请选择</view>
+                                <view class="cho-img">
+                                    <image src="/images/arrow-down.png"></image>
+                                </view>
+                            </view>
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <!-- 学历 -->
+            <view class="list-item">
+                <view class="list-text">
+                    <view class="list-tit">学历</view>
+                    <picker class="list-right" bindchange="eduChange" name="edu" value="{{index}}" range="{{edus}}">
+                        <view class="list-right">
+                            <view class="sex-name" wx:if="{{edus[edu]}}">{{edus[edu]}}</view>
+                            <view wx:else class="choise">
+                                <view class="cho-tit">请选择</view>
+                                <view class="cho-img">
+                                    <image src="/images/arrow-down.png"></image>
+                                </view>
+                            </view>
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <!-- 身高 -->
+            <view class="list-item">
+                <view class="list-text">
+                    <view class="list-tit">身高/cm</view>
+                     <picker class="list-right" bindchange="heightChange" name="height" value="{{index}}" range="{{heights}}">
+                        <view class="list-right">
+                            <view class="sex-name" wx:if="{{heights[height]}}">{{heights[height]}}</view>
+                            <view wx:else class="choise">
+                                <view class="cho-tit">请选择</view>
+                                <view class="cho-img">
+                                    <image src="/images/arrow-down.png"></image>
+                                </view>
+                            </view>
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <!-- 体重 -->
+            <view class="list-item">
+                <view class="list-text">
+                    <view class="list-tit">体重/kg</view>
+                    <picker class="list-right" bindchange="weightChange" name="weight" value="{{index}}" range="{{weights}}">
+                        <view class="list-right">
+                            <view class="sex-name" wx:if="{{weights[weight]}}">{{weights[weight]}}</view>
+                            <view wx:else class="choise">
+                                <view class="cho-tit">请选择</view>
+                                <view class="cho-img">
+                                    <image src="/images/arrow-down.png"></image>
+                                </view>
+                            </view>
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <!-- 简介 -->
+            <view class="list-tit brief">简介</view>
+            <!-- 图片 -->
+            <view class="srclist">
+                <block wx:for="{{images}}" wx:key="{{item}}">
+                    <view class="img" bindtap="look" data-item="{{item.image}}">
+                        <image mode="aspectFill" src="{{tempFilePaths?tempFilePaths:item.image}}"></image>
+                    </view>
+                </block>
+                <view class="img" bindtap="add">
+                    <image mode="aspectFill" src="/images/src/add.png"></image>
+                </view>
+            </view>
+            <!-- 个人简介 -->
+            <view class="brief-info">
+                <textarea placeholder="添加个人简介" name="content" placeholder-class="brief-p" auto-height value="{{content}}" />
+            </view>
+
+
+            <button class="save" form-type="submit">保存</button>
+
+
+
+        </view>
+    </form>
+</template>

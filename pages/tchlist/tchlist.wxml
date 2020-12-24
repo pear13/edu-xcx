@@ -1,0 +1,79 @@
+<!--pages/tchlist/tchlist.wxml-->
+<!-- 选择上课时间 -->
+<!-- <view class="pick">
+    <picker name="date" mode="date" value="{{date}}" bindchange="dateChange">
+        <view class="list-tit">{{date?date:'选择上课时间'}}</view>
+    </picker>
+</view> -->
+<view class="container">
+    <view class="list" wx:if="{{list.length>0}}">
+        <view class="tch" bindtap="tch" wx:for="{{list}}" wx:key="{{item}}" data-index="{{index}}">
+            <view class="avatar">
+                <image src="{{item.tch.avatar}}" mode="aspectFill"></image>
+            </view>
+            <view class="name">{{item.tch.name}}</view>
+            <view class="time">上课时间：
+                <text style="color=#2f72c9">{{item.dates}} {{item.start}}</text>
+            </view>
+            <view class="order {{index==intch?'act':''}}">{{index==intch?'已选定':'立即预约'}}</view>
+        </view>
+    </view>
+    <view class="nodata" wx:else>暂无授课老师信息</view>
+</view>
+<view class="bottom">
+    <button class="friend friend-r" bindtap="accord">
+        <view class="icon">
+            <image src="/images/icon/team.png"></image>
+        </view>
+        <view class="fri-tit">自动匹配</view>
+    </button>
+    <button class="friend friend-r" bindtap="friend">
+        <view class="icon">
+            <image src="/images/icon/team.png"></image>
+        </view>
+        <view class="fri-tit">公开邀请</view>
+    </button>
+    <button class="friend" bindtap="team">
+        <view class="icons">
+            <image src="/images/icon/share.png"></image>
+        </view>
+        <view class="fri-tit">特定邀请</view>
+    </button>
+</view>
+
+<!-- 邀请好友弹窗 -->
+<van-popup show="{{ show }}" bind:close="onClose">
+    <view class="popup">
+        <view class="pop-tit">设置条件</view>
+        <view class="pop-item">
+
+            <view class="pop-name">性别</view>
+            <picker class="picker" range="{{sex_range}}" bindchange="sexChange">
+                <view class="pop-pick">{{sex_a?sex_range[sex_a]:'不限'}}</view>
+            </picker>
+        </view>
+        <view class="pop-item">
+
+            <view class="pop-name">英语水平</view>
+            <picker class="picker" range="{{eng_level_range}}" bindchange="levelChange">
+                <view class="pop-pick">{{level_a?eng_level_range[level_a]:'不限'}}</view>
+            </picker>
+        </view>
+        <view class="pop-item">
+
+            <view class="pop-name">年龄段</view>
+            <picker class="picker" range="{{ages_range}}" bindchange="ageChange">
+                <view class="pop-pick">{{age_a?ages_range[age_a]:'不限'}}</view>
+            </picker>
+        </view>
+        <button class="pop-but" bindtap="pickerok">完成</button>
+    </view>
+
+</van-popup>
+
+
+<!-- 
+    <view class="pop-icon">
+                <image src="/images/icon/pay.png"></image>
+            </view>
+            <view class="pop-name">帮TA付</view> -->

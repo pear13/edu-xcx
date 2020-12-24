@@ -1,0 +1,22 @@
+<!--components/sound/sound.wxml-->
+
+<view class="b-list">
+    <button style='margin-top:20rpx;' class="save {{isSpeaking?'fail':'success'}} {{isPlaying?'fail':''}}" bindtap="startRecord">开始录音</button>
+    <button style='margin-top:20rpx;' class="save {{isSpeaking?'success':'fail'}} {{isPlaying?'fail':''}}" bindtap="stopRecord">停止录音</button>
+    <button style='margin-top:20rpx;' class="save {{isSpeaking?'fail':'success'}} {{isPlaying?'fail':'success'}}" bindtap="playAudio">{{isPlaying?'播放中...':'播放录音'}}</button>
+</view>
+
+<view class="voice-style {{isSpeaking ? 'show' : ''}}" wx:if="{{isSpeaking}}">
+    <image wx:if="{{j==1}}" class="sound-style" src="/images/voice_icon_speech_sound_1.png"></image>
+    <image wx:if="{{j==2}}" class="sound-style" src="/images/voice_icon_speech_sound_2.png"></image>
+    <image wx:if="{{j==3}}" class="sound-style" src="/images/voice_icon_speech_sound_3.png"></image>
+    <image wx:if="{{j==4}}" class="sound-style" src="/images/voice_icon_speech_sound_4.png"></image>
+    <image wx:if="{{j==5}}" class="sound-style" src="/images/voice_icon_speech_sound_5.png"></image>
+</view>
+
+<view class="voice-style {{isPlaying ? 'show' : ''}}" wx:if="{{isPlaying}}">
+    <image wx:if="{{j==1}}" class="sound-s" src="/images/sound_2.png"></image>
+    <image wx:if="{{j==2}}" class="sound-s" src="/images/sound_1.png"></image>
+   <image wx:if="{{j==3}}" class="sound-s" src="/images/sound_2.png"></image>
+    <image wx:if="{{j==4}}" class="sound-s" src="/images/sound_1.png"></image>
+</view>

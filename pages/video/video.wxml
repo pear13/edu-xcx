@@ -1,0 +1,4 @@
+<!--pages/video/video.wxml-->
+<view class='wrapper'>
+    <video class='video-video' autoplay='{{true}}' show-center-play-btn="{{false}}" src='{{video}}'></video>
+</view>

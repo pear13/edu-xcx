@@ -1,0 +1,21 @@
+<view class="m-carousel m-carousel-{{styleType}}" wx:if="{{list.length>=1}}">
+  <swiper autoplay="{{autoplay}}" bindchange="handleChange" circular="{{true}}" current="{{current}}" duration="{{duration}}" interval="4000" list="{{list.length}}" style="height: {{height}}rpx">
+    <view class="inner">
+      <swiper-item wx:for="{{list}}" wx:key="index">
+
+        <image lazyLoad bindtap="handleTap" data-id="{{item.sub_id}}" mode="aspectFill" src="{{item.img}}"></image>
+        <view class="slot" style="{{withSlot.style}}" wx:if="{{withSlot&&index===withSlot.index}}">
+          <slot></slot>
+        </view>
+      </swiper-item>
+    </view>
+  </swiper>
+  <block wx:if="indicator">
+    <view class="indicator" wx:if="{{styleType!=2}}">
+      {{activeIndex+1}}/{{list.length}}
+    </view>
+    <view class="indicatorWrap" wx:if="{{styleType==2}}">
+      <view class="indicator {{activeIndex===index?'active':''}}" wx:for="{{list}}"  wx:key="index"></view>
+    </view>
+  </block>
+</view>

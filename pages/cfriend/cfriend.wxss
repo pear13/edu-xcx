@@ -1,0 +1,133 @@
+/* pages/cfriend/cfriend.wxss */
+@import "/pages/spell/spell.wxss";
+@import "/templates/friend/friend.wxss";
+
+.con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 200rpx;
+}
+
+.screen {
+    margin-top: 30rpx;
+    border: solid 1rpx #b9b9b9;
+    height: 60rpx;
+    width: 200rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rpx;
+    margin-bottom: 30rpx;
+    background: #fff;
+}
+
+.screen-tit {
+    font-size: 28rpx;
+}
+
+.screen image {
+    width: 30rpx;
+    height: 40rpx;
+}
+/* 2 */
+.bottom {
+    width: 690rpx;
+    height: 90rpx;
+    background-color: #2f72c9;
+    border-radius: 45rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 46rpx;
+    font-size: 30rpx;
+    color: #fff;
+}
+
+.detail {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+
+.src {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 44rpx 0 60rpx 0;
+}
+
+.src image {
+    width: 128rpx;
+    height: 128rpx;
+    background-color: #ededed;
+    border: solid 4rpx rgba(234, 234, 234, 0.83);
+    border-radius: 50%;
+}
+
+.title {
+    padding-left: 30rpx;
+    height: 60rpx;
+    font-family: PingFang-SC-Medium;
+    font-size: 35rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0px;
+    color: #348ef4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.type {
+    width: 100%;
+    height: 266rpx;
+    background: #fff;
+}
+
+.top {
+    padding-top: 20rpx;
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30rpx;
+}
+
+.label-list {
+    width: 170rpx;
+    height: 60rpx;
+    background-color: #f0f7ff;
+    border-radius: 30rpx;
+    margin-right: 45rpx;
+    margin-bottom: 26rpx;
+    font-family: PingFang-SC-Regular;
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0px;
+    color: #348ef4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signs{
+    font-size: 30rpx;
+    color: #333;
+    margin-left: 20rpx;
+    padding: 20rpx;
+}
+.top{
+    padding-top: 20rpx;
+
+}

@@ -1,0 +1,12 @@
+<!--pages/complain/complain.wxml-->
+<view class="con">
+    <view class="label">
+        <view bindtap="label" wx:for="{{label}}" wx:key="{{item}}" class="label-item {{item.sec?'act':'fail'}}"  data-id="{{index}}">{{item.value}}</view>
+    </view>
+    <view class="tit">详细说明</view>
+    <view class="list-value list-sign">
+        <textarea class="list-sign" placeholder-class="pc" name="sign" auto-height placeholder="请您做出详细说明" bindinput="sign" value="{{sign}}" />
+    </view>
+
+    <button class="ok" bindtap="ok">提交</button>
+</view>

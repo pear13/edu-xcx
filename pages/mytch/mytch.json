@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的教师",
+"usingComponents": {
+    "van-popup": "/dist/popup/index"
+}
+}

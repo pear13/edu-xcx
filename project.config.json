@@ -1,0 +1,146 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.12.2",
+	"appid": "wx0c322f63dde3408a",
+	"projectname": "group",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/study/study",
+					"pathName": "pages/study/study",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/teamdetail/teamdetail",
+					"pathName": "pages/spell/spell",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/dropok/dropok",
+					"pathName": "pages/nowstudy/nowstudy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "匹配中",
+					"pathName": "pages/teaming/teaming",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "邀请好友",
+					"pathName": "pages/friendlist/friendlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请成为教师",
+					"pathName": "pages/apply/apply",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的介绍",
+					"pathName": "pages/introduce/introduce",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "教师端我的课程",
+					"pathName": "pages/tsub/tsub",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "学习",
+					"pathName": "pages/partner/partner",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "视频",
+					"pathName": "pages/video/video",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mytch/mytch",
+					"pathName": "pages/mytch/mytch",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/test/test",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

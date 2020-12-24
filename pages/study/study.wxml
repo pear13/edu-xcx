@@ -1,0 +1,115 @@
+<!--pages/study/study.wxml-->
+<!-- 课程列表 -->
+<import src="/templates/sublist/sublist.wxml" />
+<view class="top">
+    <view class="card">
+        <!-- <view class="name">
+            <view class="card-icon">
+                <image src="/images/icon/crown.png"></image>
+            </view>
+            <view class="card-name">普通会员 </view>
+            <view class="all-nums">10课时</view>
+        </view> -->
+        <view class="card-num">会员：{{study.card?study.card:'0'}}课时 | 其他：{{study.other?study.other:'0'}}课时 </view>
+        <view class="valid">购买日期：{{study.card_start}} </view>
+        <view class="valid">到期日期：{{study.card_end}} </view>
+    </view>
+</view>
+<view class="flex-study">
+    <view class="study">
+        <view class="study-l num-r-b">
+            <view class="today">今日待学</view>
+            <view class="wait-num">
+                <text class="nums">{{study.wait}}</text>节课</view>
+        </view>
+        <view class="study-l num-r-b">
+            <view class="study-icon">
+                <view class="study-i">
+                    <image src="/images/icon/addup.png"></image>
+                </view>
+                <view class="study-c-n">已学习</view>
+            </view>
+            <view class="wait-num">
+                <text class="nums">{{study.always}}</text>天</view>
+        </view>
+        <view class="study-l ">
+            <view class="study-icon">
+                <view class="study-i">
+                    <image src="/images/icon/series.png"></image>
+                </view>
+                <view class="study-c-n">累计学习</view>
+            </view>
+            <view class="wait-num">
+                <text class="nums">{{study.all_time}}</text>小时</view>
+        </view>
+    </view>
+    <view class="partner" bindtap="partner">学习搭档</view>
+</view>
+<!-- 最近在学 -->
+<view class="now">
+    <navigator class="now-tit" url="/pages/nowstudy/nowstudy">
+        <view class="now-name">最近在学</view>
+        <view class="now-tit-more">
+            <view class="now-more">更多</view>
+            <view class="now-more-icon">
+                <image src="/images/icon/right.png"></image>
+            </view>
+        </view>
+    </navigator>
+    <scroll-view scroll-x class="nowlist">
+        <view class="now-item" wx:for="{{study.now}}" wx:key="{{item}}" bindtap="zjsub" data-id="{{item.id}}">
+            <view class="now-item-f">
+                <view class="now-sub-img">
+                    <image mode="aspectFill" src="{{item.sub.main}}"></image>
+                </view>
+                <view class="now-sub-name">{{item.list.name}}</view>
+            </view>
+        </view>
+
+    </scroll-view>
+</view>
+
+<!-- 拼课记录 -->
+<view class="team">
+    <navigator class="now-tit" url="/pages/teamsub/teamsub">
+        <view class="now-name">拼课记录</view>
+        <view class="now-tit-more">
+            <view class="now-more">更多</view>
+            <view class="now-more-icon">
+                <image src="/images/icon/right.png"></image>
+            </view>
+        </view>
+    </navigator>
+    <view class="team-list">
+        <view wx:for="{{study.team}}" wx:key="{{item}}" bindtap="pksub" data-id="{{item.id}}">
+            <template is="team" data="{{...item}}" />
+        </view>
+    </view>
+</view>
+
+<!-- 报名记录 -->
+<view class="team">
+    <navigator class="now-tit" url="/pages/signup/signup">
+        <view class="now-name">待评价课程</view>
+        <view class="now-tit-more">
+            <view class="now-more">更多</view>
+            <view class="now-more-icon">
+                <image src="/images/icon/right.png"></image>
+            </view>
+        </view>
+    </navigator>
+    <view class="team-list">
+        <block>
+            <view wx:for="{{study.signup}}" wx:key="{{item}}" bindtap="bmsub" data-id="{{item.id}}">
+                <template is="team" data="{{...item}}" />
+            </view>
+        </block>
+    </view>
+</view>
+<view style="height:200rpx;"></view>
+<van-tabbar active="{{ tab_a }}" bind:change="tabChange" active-color="#4b72a4">
+    <van-tabbar-item wx:for="{{tablist}}" wx:key="{{item}}">
+        <image slot="icon" src="{{ item.icon }}" mode="aspectFit" />
+        <image slot="icon-active" src="{{ item.iactive }}" mode="aspectFit" /> {{item.text}}
+    </van-tabbar-item>
+</van-tabbar>

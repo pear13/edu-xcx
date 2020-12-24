@@ -1,0 +1,47 @@
+<!--pages/tmy/tmy.wxml-->
+
+
+<view class="mymoney" bindtap="cashout">
+    <view class="mytop">
+        <view class="mys">
+            <view class="micon">
+                <image src="/images/icon/my_money.png"></image>
+            </view>
+            <view class="mtext">我的收益</view>
+        </view>
+        <view class="mys">
+            <view class="ttext">提现</view>
+            <view class="ticon">
+                <image src="/images/icon/right.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="mybottom">
+        <view class="allm aborder">
+            <view class="mtitle">累计收益</view>
+            <view class="allmoeny">￥{{money.all}}</view>
+        </view>
+        <view class="allm">
+            <view class="mtitle">可提现</view>
+            <view class="allmoeny">￥{{money.ke}}</view>
+        </view>
+    </view>
+</view>
+
+<!-- <view class="mylike" bindtap="gomydetail">
+    <view class="tit-icon">
+        <view class="like-me">
+            <image src="/images/me.png"></image>
+        </view>
+        <view class="like-t">我的资料</view>
+    </view>
+    <view class="ricon">
+        <image src="/images/icon/right.png"></image>
+    </view>
+</view> -->
+<van-tabbar active="{{ tab_a }}" bind:change="tabChange" active-color="#4b72a4">
+    <van-tabbar-item wx:for="{{tablist}}" wx:key="{{item}}">
+        <image slot="icon" src="{{ item.icon }}" mode="aspectFit" />
+        <image slot="icon-active" src="{{ item.iactive }}" mode="aspectFit" /> {{item.text}}
+    </van-tabbar-item>
+</van-tabbar>

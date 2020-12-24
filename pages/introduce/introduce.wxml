@@ -1,0 +1,6 @@
+<!--pages/introduce/introduce.wxml-->
+
+<!-- 我的介绍表单模版 -->
+<import src="/templates/introduce/introduce.wxml" />
+
+<template is="introduce" data="{{...userInfo,sexs,o,ind,edus,wsks,weights,heights,tempFilePaths}}" />

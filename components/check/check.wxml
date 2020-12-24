@@ -1,0 +1,3 @@
+<!--components/check/check.wxml-->
+
+<view class="check" style="bottom: {{150+fit}}rpx;" catchtap="cut">教师端</view>

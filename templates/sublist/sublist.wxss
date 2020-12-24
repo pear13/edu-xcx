@@ -1,0 +1,226 @@
+
+.sublist{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 25rpx 0;
+    border-bottom: 1rpx solid #D9D9D9;
+}
+.lastbun{
+     height: 50rpx;
+    display: flex;
+    width: 690rpx;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.complain{
+        background: #d94034;
+    width: 150rpx;
+    height: 50rpx;
+    color: #fff;
+    font-size: 24rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30rpx;
+    margin-right: 30rpx;
+}
+.lastlearn{
+     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 25rpx;
+    border-bottom: 1rpx solid #D9D9D9;
+}
+.lastlearn .sublists{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 15rpx;
+    width: 690rpx;
+
+    
+}
+.right {
+    width: 205rpx;
+    height: 153rpx;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+}
+
+.right image {
+    width: 205rpx;
+    height: 153rpx;
+    border-radius: 10rpx;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+}
+.title{
+    max-width: 480rpx;
+    	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 50rpx;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.flex-time{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+}
+.time-icon{
+    	width: 22rpx;
+	height: 68rpx;
+    margin-right: 13rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.time-icon image{
+    	width: 22rpx;
+	height: 22rpx;
+}
+.time{
+    	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 50rpx;
+	letter-spacing: 0px;
+	color: #777777;
+}
+.label-icon{
+    	width: 14rpx;
+	line-height: 50rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 17rpx;
+}
+.label-icon image{
+       	width: 14rpx;
+	height: 20rpx;
+}
+.sorts{
+        font-size: 26rpx;
+        max-width: 430rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 50rpx;
+	letter-spacing: 0px;
+	color: #d94034;
+}
+.sorts_time{
+       	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 50rpx;
+	letter-spacing: 0px;
+	color: #d94034; 
+}
+.team-label{
+    width: 128rpx;
+	height: 52rpx;
+	border-radius: 26rpx;
+	border: solid 1rpx #f44d40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    	font-size: 26rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 40rpx;
+	letter-spacing: 0px;
+	color: #f44d40;
+
+}
+.teams{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 470rpx;
+}
+.classok{
+    background: #d94034;
+    width: 150rpx;
+    height: 50rpx;
+    color: #fff;
+    font-size: 26rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30rpx;
+}
+.fanhuan{
+    border: #d94034 1rpx solid;
+width: 150rpx;
+height: 50rpx;
+color: #d94034;
+font-size: 24rpx;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 30rpx;
+margin-right: 30rpx;
+
+}
+.fanhuans{
+    border: #d94034 1rpx solid;
+width: 150rpx;
+height: 50rpx;
+color: #d94034;
+font-size: 24rpx;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 30rpx;
+
+
+}
+.contact{
+    width: 150rpx;
+height: 50rpx;
+border-radius: 30rpx;
+background-color: #348ef4;
+display: flex;
+align-items: center;
+justify-content: center;
+
+font-family: PingFang-SC-Regular;
+font-size: 26rpx;
+font-weight: normal;
+font-stretch: normal;
+line-height: 40rpx;
+letter-spacing: 0px;
+color: #fff;
+
+}
+
+.tchclass{
+     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 25rpx;
+    border-bottom: 1rpx solid #D9D9D9;
+}
+.tchclass .sublists{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 15rpx;
+    width: 690rpx;
+
+    
+}

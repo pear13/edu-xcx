@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "邀请好友",
+    "usingComponents": {
+        "van-popup": "/dist/popup/index",
+        "i-cell-group": "/dist/cell-group/index",
+        "i-cell": "/dist/cell/index"
+    },
+    "enablePullDownRefresh": true
+}

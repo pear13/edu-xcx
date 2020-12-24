@@ -1,0 +1,16 @@
+<!--components/lead/lead.wxml-->
+
+<image class="container" src="/images/lead.png"></image>
+
+<!-- <view class="infos">
+    <view class="icon">
+        <image src="/images/car/icon.png"></image>
+    </view>
+    <view class="tit">欢迎成为惠车多会员！</view>
+    <view class="info">
+        <text>车小舅将为您提供全程一对一购车服务，   </text>
+        <text> 作为全国经销商战略伙伴，   </text>
+        <text> 带给会员底价直购快捷通道，   </text>
+        <text>给您完美购车体验！  </text>
+    </view>
+</view> -->

@@ -1,0 +1,12 @@
+<!--pages/teamok/teamok.wxml-->
+<view class="container">
+<view class="icon">
+<image src="/images/src/teamok.png"></image>
+</view>
+<view class="card">
+    <view class="card-t">上课时间：{{time}}</view>
+    <view class="card-t">上课地点：classin</view>
+ 
+</view>
+<view class="ok" bindtap="ok">知道了</view>
+</view>

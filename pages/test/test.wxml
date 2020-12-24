@@ -1,0 +1,3 @@
+<!--pages/test/test.wxml-->
+<text class="name">支付宝</text>
+<button catchtap="pay">立即支付</button>

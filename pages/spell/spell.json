@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "拼课",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "van-rate": "/dist/rate/index",
+        "van-popup": "/dist/popup/index"
+    }
+}

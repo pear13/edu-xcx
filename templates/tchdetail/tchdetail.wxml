@@ -1,0 +1,14 @@
+<!-- 老师介绍 -->
+<template name="tchdetail">
+<view class="tch">
+<view class="tch-top">
+<view class="tch-ava">
+<image src=""></image>
+</view>
+<view class="tch-main">
+<view class="tch-name"></view>
+<view class="score"></view>
+</view>
+</view>
+</view>
+</template>

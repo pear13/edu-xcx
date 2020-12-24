@@ -1,0 +1,31 @@
+<!--pages/nowstudy/nowstudy.wxml-->
+<import src="/templates/sublist/sublist.wxml" />
+<van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="待上课">
+        <view class="container">
+
+            <block wx:if="{{list1.length>0}}">
+                <view class="list" wx:for="{{list1}}" wx:key="{{item}}" bindtap="goDetail" data-id="{{item.id}}">
+                    <template is="lastlearn" data="{{...item}}" />
+                </view>
+            </block>
+            <view class="nodata" wx:else>暂无数据</view>
+        </view>
+    </van-tab>
+    <van-tab title="售后/退课">
+        <view class="container">
+            <block wx:if="{{list2.length>0}}">
+                <view class="list" wx:for="{{list2}}" wx:key="{{item}}" bindtap="goDetail" data-id="{{item.id}}">
+                    <template is="lastlearn" data="{{...item}}" />
+                </view>
+            </block>
+            <view class="nodata" wx:else>暂无数据</view>
+            <view style="height:150rpx"></view>
+        </view>
+        <view class="bot" bindtap="bot">联系客服</view>
+    </van-tab>
+
+</van-tabs>
+<van-notify id="van-notify" />
+<van-dialog id="van-dialog" />
+<bot />

@@ -1,0 +1,6 @@
+<!--   切换按钮 -->
+<template name="cut">
+<view class="con" catchtap="cut">
+<image src="/images/icon/tch.png"></image>
+</view>
+</template>

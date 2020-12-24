@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "学习搭档",
+  "usingComponents": {
+      "van-popup": "/dist/popup/index"
+  }
+}

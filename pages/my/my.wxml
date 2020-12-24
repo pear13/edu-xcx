@@ -1,0 +1,190 @@
+<!--pages/my/my.wxml-->
+
+<view class="top">
+	<block wx:if="{{userInfo}}">
+		<view class="user">
+			<view class="avatar">
+				<image src="{{userInfo.avatar}}"></image>
+			</view>
+			<view class="name">{{userInfo.wx_name}}</view>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="user">
+			<button class="land" open-type="getUserInfo" bindgetuserinfo="GetUser">立即登陆</button>
+		</view>
+	</block>
+	<view class="card">
+		<view class="card-info">
+			<view class="card-icon">
+				<image src="/images/icon/crown.png"></image>
+			</view>
+			<view class="card-name">VIP会员</view>
+		</view>
+		<button class="buy" bindtap="buycard">
+			{{card?'已开通':'立即开通'}}
+		</button>
+	</view>
+</view>
+
+<view class="list">
+	<!-- 购买会员 -->
+	<view class="item" bindtap="buycard">
+		<view class="right-tit">
+			<view class="vip">
+				<image src="/images/icon/vip.png"></image>
+			</view>
+			<view class="list-tit">购买会员卡</view>
+		</view>
+		<view class="list-r">
+			<image src="/images/icon/right.png"></image>
+		</view>
+	</view>
+
+	<!-- 我的教师 -->
+	<navigator class="item" url="/pages/mytch/mytch">
+		<view class="right-tit">
+			<view class="about">
+				<image src="/images/icon/about.png"></image>
+			</view>
+			<view class="list-tit">我的教师</view>
+		</view>
+		<view class="list-r">
+			<image src="/images/icon/right.png"></image>
+		</view>
+	</navigator>
+		<!-- 我的教师 -->
+	<navigator class="item" url="/pages/test/test">
+		<view class="right-tit">
+			<view class="about">
+				<image src="/images/icon/about.png"></image>
+			</view>
+			<view class="list-tit">我的教师</view>
+		</view>
+		<view class="list-r">
+			<image src="/images/icon/right.png"></image>
+		</view>
+	</navigator>
+	<!-- 我的拼课 -->
+	<navigator class="item"  url="/pages/teamsub/teamsub">
+		<view class="right-tit">
+			<view class="info">
+				<image src="/images/icon/info.png"></image>
+			</view>
+			<view class="list-tit">我的拼课</view>
+		</view>
+		<view class="list-r">
+			<image src="/images/icon/right.png"></image>
+		</view>
+	</navigator>
+	<!-- 我的课程 -->
+	<navigator class="item"  url="/pages/nowstudy/nowstudy">
+		<view class="right-tit">
+			<view class="info">
+				<image src="/images/icon/info.png"></image>
+			</view>
+			<view class="list-tit">我的课程</view>
+		</view>
+		<view class="list-r">
+			<image src="/images/icon/right.png"></image>
+		</view>
+	</navigator>
+	<!-- 学习搭档 -->
+	<navigator class="item" url='/pages/partner/partner'>
+		<view class="right-tit">
+			<view class="about">
+				<image src="/images/icon/about.png"></image>
+			</view>
+			<view class="list-tit">学习搭档</view>
+		</view>
+		<view class="list-r">
+			<image src="/images/icon/right.png"></image>
+		</view>
+	</navigator>
+
+
+	<!-- 邀请好友 -->
+	<navigator class="item" url="/pages/friendlist/friendlist">
+		<view class="right-tit">
+			<view class="about">
+				<image src="/images/icon/about.png"></image>
+			</view>
+			<view class="list-tit">邀请好友</view>
+		</view>
+		<view class="list-r">
+			<image src="/images/icon/right.png"></image>
+		</view>
+	</navigator>
+	<!-- 我的 收益-->
+	<view class="item" bindtap="money">
+		<view class="right-tit">
+			<view class="money">
+				<image src="/images/icon/money.png"></image>
+			</view>
+			<view class="list-tit">我的收益</view>
+		</view>
+		<view class="list-r">
+			<image src="/images/icon/right.png"></image>
+		</view>
+	</view>
+
+	<!-- 我的介绍 -->
+	<view class="item" bindtap="introduce">
+		<view class="right-tit">
+			<view class="info">
+				<image src="/images/icon/info.png"></image>
+			</view>
+			<view class="list-tit">我的介绍</view>
+		</view>
+		<view class="list-r">
+			<image src="/images/icon/right.png"></image>
+		</view>
+	</view>
+
+	<!-- 申请成为教师 -->
+	<view class="item" bindtap="goApply">
+		<view class="right-tit">
+			<view class="about">
+				<image src="/images/icon/apply.png"></image>
+			</view>
+			<view class="list-tit">申请成为教师</view>
+		</view>
+		<view class="list-r">
+			<image src="/images/icon/right.png"></image>
+		</view>
+	</view>
+	<!-- 联系我们 -->
+	<button class="item-i" open-type="contact">
+		<view class="right-tit">
+			<view class="contact">
+				<image src="/images/icon/contact.png"></image>
+			</view>
+			<view class="list-tit">联系我们</view>
+		</view>
+		<view class="list-r">
+			<image src="/images/icon/right.png"></image>
+		</view>
+	</button>
+	<!-- 关于我们 -->
+	<navigator class="item" url="/pages/company/company">
+		<view class="right-tit">
+			<view class="about">
+				<image src="/images/icon/about.png"></image>
+			</view>
+			<view class="list-tit">关于我们</view>
+		</view>
+		<view class="list-r">
+			<image src="/images/icon/right.png"></image>
+		</view>
+	</navigator>
+</view>
+<view style="height:200rpx"></view>
+
+
+
+<van-tabbar active="{{ tab_a }}" bind:change="tabChange" active-color="#4b72a4">
+	<van-tabbar-item wx:for="{{tablist}}" wx:key="{{item}}">
+		<image slot="icon" src="{{ item.icon }}" mode="aspectFit" />
+		<image slot="icon-active" src="{{ item.iactive }}" mode="aspectFit" /> {{item.text}}
+	</van-tabbar-item>
+</van-tabbar>

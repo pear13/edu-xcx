@@ -1,0 +1,40 @@
+<!--pages/home/home.wxml-->
+<import src="/templates/sublist/sublist.wxml" />
+<form catchsubmit="submitFormId" report-submit='true'>
+	<van-tabs active="{{ active }}" swipe-threshold="3" bind:change="onChange" len="{{sort.length}}">
+		<van-tab wx:for="{{sort}}" wx:key="{{item}}" title="{{item.name}}">
+			<view class="container">
+				<banner list="{{banner}}" autoplay="true" bind:goDetail="goDetail" />
+
+				<block wx:if="{{item.list.length>0}}">
+					<view class="list" wx:for="{{item.list}}" wx:key="{{item}}" bindtap="goDetail" data-id="{{item.id}}">
+						<template is="sublist" data="{{...item}}" />
+					</view>
+				</block>
+				<view class="nodata" wx:else>暂无数据</view>
+			</view>
+		</van-tab>
+
+	</van-tabs>
+</form>
+<!--新人礼包 -->
+<block wx:if="{{!gift}}">
+	<newgift bind:perfect="perfect" />
+</block>
+<!--   身份切换 -->
+<block wx:if="{{utype==2}}">
+<check />
+</block>
+
+
+<view style="height:200rpx;"></view>
+
+<van-tabbar active="{{ tab_a }}" bind:change="tabChange" active-color="#4b72a4">
+	<van-tabbar-item wx:for="{{tablist}}" wx:key="{{item}}">
+		<image slot="icon" src="{{ item.icon }}" mode="aspectFit" />
+		<image slot="icon-active" src="{{ item.iactive }}" mode="aspectFit" /> {{item.text}}
+	</van-tabbar-item>
+</van-tabbar>
+<van-dialog id="van-dialog" />
+<!-- 引导页 -->
+<lead wx:if="{{lead}}" />

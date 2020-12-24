@@ -1,0 +1,105 @@
+/* pages/vappraise/vappraise.wxss */
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 690rpx;
+    padding: 25rpx 30rpx;
+    background: #fff;
+    border-bottom: 1rpx solid #f3f3f3;
+}
+
+.src {
+    width: 130rpx;
+    height: 98rpx;
+    background-color: #e0e0e0;
+    border-radius: 6rpx;
+}
+
+.src image {
+    width: 130rpx;
+    height: 98rpx;
+}
+
+.detail {
+    margin-left: 25rpx;
+    font-size: 28rpx;
+    line-height: 24rpx;
+    color: #333;
+}
+
+.field {
+    height: 300rpx;
+    background: #fff;
+}
+
+.srclist {
+    background: #fff;
+    width: 720rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 20rpx;
+    padding-left: 30rpx;
+}
+
+.img {
+    width: 172rpx;
+    height: 172rpx;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.img image {
+    width: 172rpx;
+    height: 172rpx;
+}
+
+.rate {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    background: #fff;
+    padding-left: 30rpx;
+    margin-top: 20rpx;
+    height: 240rpx;
+}
+
+.rate-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.rate-tit {
+    font-family: PingFang-SC-Regular;
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20rpx;
+}
+
+.submit {
+    width: 750rpx;
+    height: 88rpx;
+    background-color: #348ef4;
+    font-size: 34rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+}

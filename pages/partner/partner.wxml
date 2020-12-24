@@ -1,0 +1,59 @@
+<!--pages/partner/partner.wxml-->
+
+<view class="list">
+    <view class="list-item" wx:for="{{list}}" wx:key="{{item}}">
+        <view class="left">
+            <view class="avatar">
+                <image src="{{item.avatar}}"></image>
+            </view>
+            <view class="info">
+                <view class="info-tit">
+                    <text class="info-name">{{item.name}}</text> {{item.sex?'男':'女'}} | {{item.age}}岁 | {{item.ocp}}
+                </view>
+                <view class="info-sign">
+                    <view class="info-icon">
+                        <image src="/images/icon/sign.png"></image>
+                    </view>
+                    <view class="sign">{{item.sign}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="contant act" wx:if="{{item.apply==0}}" bindtap="apply" data-id="{{item.id}}" data-apply="{{item.apply}}" data-index="{{index}}">申请成为好友</view>
+             <view class="contant"  wx:if="{{item.apply==1}}">已申请</view>
+                <view class="contant" bindtap="look" data-index="{{index}}" wx:if="{{item.apply==2}}">查看联系方式</view>
+                 <view class="contant" wx:if="{{item.apply==3}}">拒绝了</view>
+                   <view class="contant" data-index="{{index}}" bindtap="agree" data-id="{{item.id}}"  wx:if="{{item.apply==4}}">对方请求加您为好友</view>
+    </view>
+
+
+</view>
+
+<!-- 查看联系方式 -->
+<van-popup show="{{ show }}" bind:close="onClose">
+    <view class="popup" catchtap="copy">
+        <view class="pop-items">
+            <view class="pop-item">
+                <view class="pop-icon">
+                    <image src="/images/icon/"></image>
+                </view>
+                <view class="pop-info">微信：{{list[index].wx_num}}</view>
+            </view>
+
+            <view class="pop-item">
+                <view class="pop-icon">
+                    <image src="/images/icon/"></image>
+                </view>
+                <view class="pop-info">手机：{{list[index].phone}}</view>
+            </view>
+
+            <view class="pop-item">
+                <view class="pop-icon">
+                    <image src="/images/icon/"></image>
+                </view>
+                <view class="pop-info">邮箱：{{list[index].mail}}</view>
+            </view>
+        </view>
+    </view>
+</van-popup>
+
+<van-dialog id="van-dialog" />

@@ -1,0 +1,100 @@
+<!--pages/cfriend/cfriend.wxml-->
+
+<import src="/templates/friend/friend.wxml" />
+<!-- 消息提示wxml -->
+<import src="/templates/notify/notify.wxml" />
+<template is="notify" />
+
+<view class="con">
+    <view class="screen" bindtap="screen">
+        <view class="screen-tit">综合筛选</view>
+        <image src="/images/icon/down-h.png" role="img"></image>
+    </view>
+    <template is="friend" data="{{list}}"></template>
+
+    <button class="bottom" open-type="share" >找不到合适的？立刻邀请我的好友!</button>
+    <!-- 综合筛选 -->
+    <van-popup show="{{ show_filter }}" position="top" bind:close="onClose" custom-style="margin-top: 100rpx;width:690rpx; height:85%; border-radius: 10rpx;">
+        <view class="filter">
+            <block>
+                <scroll-view scroll-y style="height:75%">
+                    <view class="filter-t">性别</view>
+                    <view class="filter-list">
+                        <view bindtap="tapsex" wx:for="{{sex}}" wx:key="{{item}}" class="filter-item {{item.sec?'act':'fail'}}" data-index="{{index}}">
+                            {{item.value}}
+                        </view>
+
+                    </view>
+                    <view class="filter-t">年龄</view>
+                    <view class="filter-list">
+                        <view bindtap="tapage" data-index="{{index}}" wx:for="{{ages}}" wx:key="{{item}}" class="filter-item {{item.sec?'act':'fail'}}">
+                            {{item.value}}
+                        </view>
+
+                    </view>
+
+                    <view class="filter-t">职业</view>
+                    <view class="filter-list">
+                        <view bindtap="tapocc" data-index="{{index}}" wx:for="{{occ}}" wx:key="{{item}}" class="filter-item {{item.sec?'act':'fail'}}">
+                            {{item.value}}
+                        </view>
+
+                    </view>
+
+
+                    <view class="filter-t">学历</view>
+                    <view class="filter-list">
+                        <view bindtap="tapedu" data-index="{{index}}" wx:for="{{edu}}" wx:key="{{item}}" class="filter-item {{item.sec?'act':'fail'}}">
+                            {{item.value}}
+                        </view>
+
+                    </view>
+
+                    <view class="filter-t">英语水平</view>
+                    <view class="filter-list">
+                        <view bindtap="tapeng" data-index="{{index}}" wx:for="{{eng_level}}" wx:key="{{item}}" class="filter-item {{item.sec?'act':'fail'}}">
+                            {{item.value}}
+                        </view>
+
+                    </view>
+                </scroll-view>
+                <view class="rok">
+                    <button class="reok" bindtap="reok">重置</button>
+                    <button class="ok" bindtap="ok">确定</button>
+                </view>
+            </block>
+            <block wx:if="{{filter_id==1}}">
+                <scroll-view scroll-y style="height:{{filter_id==3?'75%':'15%'}}">
+                    <view class="filter-list" style="padding-top:30rpx;">
+                        <view bindtap="tapsort" wx:for="{{sort}}" wx:key="{{item}}" class="filter-item {{item.sec?'act':'fail'}}" data-index="{{index}}">
+                            {{item.name}}
+                        </view>
+
+                    </view>
+                </scroll-view>
+            </block>
+        </view>
+    </van-popup>
+    <!-- 详细信息 -->
+    <van-popup show="{{ show_detail }}" position="top" bind:close="detailClose" custom-style="margin-top: 100rpx;width:600rpx; height:65%; border-radius: 10rpx;">
+        <view class="detail">
+            <view class="src">
+                <image wx:if="{{info.avatar}}" mode="aspectFill" src="{{info.avatar}}"></image>
+
+            </view>
+            <view class="title">基本信息</view>
+            <i-cell-group>
+                <i-cell title="姓名" wx:if="{{info.name}}">{{info.name}}</i-cell>
+                <i-cell title="性别">{{info.sex?'男':'女'}}</i-cell>
+                <i-cell title="出生日期" wx:if="{{info.age}}">{{info.age}}</i-cell>
+                <i-cell title="所在城市" wx:if="{{info.city}}">{{info.city}}</i-cell>
+                <i-cell title="职业" wx:if="{{info.ocp_display}}">{{info.ocp_display}}</i-cell>
+                <i-cell title="学历" wx:if="{{info.edu_display}}">{{info.edu_display}}</i-cell>
+            </i-cell-group>
+            <block if="{{info.sign}}">
+                <view class="title top">签名</view>
+                <view class="signs">{{info.sign}}</view>
+            </block>
+        </view>
+    </van-popup>
+</view>

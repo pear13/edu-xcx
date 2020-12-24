@@ -1,0 +1,186 @@
+/* pages/tmy/tmy.wxss */
+.mymoney {
+margin-top: 200rpx;
+    width: 690rpx;
+    height: 219rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin: 0 30rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.allm {
+    width: 263rpx;
+    height: 91rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mtitle {
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0rpx;
+    color: #444;
+}
+
+.allmoeny {
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0px;
+    color: #348ef4;
+}
+.mytop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 690rpx;
+    margin-top: 23rpx;
+}
+.mys {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 68rpx;
+}
+.micon {
+    width: 28rpx;
+    height: 68rpx;
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.micon image {
+    width: 28rpx;
+    height: 30rpx;
+}
+.ttext {
+    font-family: PingFang-SC-Regular;
+    font-size: 26rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0px;
+    color: #444;
+    margin-right: 17rpx;
+}
+
+.ticon {
+    margin-right: 20rpx;
+}
+
+.ticon image {
+    width: 14rpx;
+    height: 24rpx;
+}
+
+.micon {
+    width: 28rpx;
+    height: 68rpx;
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.micon image {
+    width: 28rpx;
+    height: 30rpx;
+}
+.aborder {
+    border-right: solid 1rpx #f3f3f3;
+}
+
+.mybottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 527rpx;
+    margin-top: 40rpx;
+    margin-bottom: 41rpx;
+}
+
+.like-t {
+    font-family: PingFang-SC-Regular;
+    font-size: 28rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 24rpx;
+    letter-spacing: 0px;
+    color: #444;
+    height: 100%;
+}
+
+.like-tit {
+    height: 100%;
+    width: 34rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15rpx;
+}
+
+.like-tit image {
+    width: 30rpx;
+    height: 28rpx;
+}
+
+.like-me {
+    height: 100%;
+    width: 34rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15rpx;
+}
+
+.like-me image {
+    width: 34rpx;
+    height: 35rpx;
+}
+.mylike {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 30rpx;
+    width: 690rpx;
+    height: 90rpx;
+    background: #fff;
+    margin-top: 30rpx;
+}
+.tit-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20rpx;
+}
+
+.ricon {
+    height: 100%;
+    width: 20rpx;
+    margin-right: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ricon image {
+    width: 20rpx;
+    height: 24rpx;
+}

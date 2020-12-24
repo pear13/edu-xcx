@@ -1,0 +1,16 @@
+<!--pages/company/company.wxml-->
+<view class='m-aboutMeBox'>
+  <image class='m-aboutMe-logo' lazy-load='{{true}}' src='http://vie.zhengqi1995.com/inivatebg.png'></image>
+  <view class='top'>
+    <image class='logo' lazy-load='{{true}}'  src='{{platform.logo}}'></image>
+  </view>
+  <view class='middle'>
+    <view class='title'>
+      {{platform.name}}
+    </view>
+    <view class='content'>
+{{platform.brief}}
+    </view>
+  </view>
+</view>
+<bot />

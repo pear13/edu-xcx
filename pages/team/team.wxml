@@ -1,0 +1,11 @@
+<!--pages/team/team.wxml-->
+<!-- 拼课列表 -->
+<import src="/templates/spell/spell.wxml" />
+
+<view class="content" wx:if="{{list.length>0}}">
+    <block wx:for="{{list}}" wx:key="{{item}}">
+        <template is="spell" data="{{...item}}" />
+        </block>
+</view>
+<view class="nodata" wx:else>暂无组队信息</view>
+<button class="create" wx:if="{{list.length==0}}" bindtap="create">自主开课</button>

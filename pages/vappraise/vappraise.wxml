@@ -1,0 +1,44 @@
+<!--pages/vappraise/vappraise.wxml-->
+<!-- <view class="title">
+    <view class="src">
+        <image src=""></image>
+    </view>
+    <view class="detail one-text">综合评价</view>
+</view> -->
+<view class="field">
+    <van-cell-group>
+        <van-field bind:change="messtext"	 value="{{ message }}" size="large" type="textarea" placeholder='请您对订单做出评价吧' autosize border="{{ false }}" />
+    </van-cell-group>
+</view>
+
+  
+
+<view class="srclist">
+  <block  wx:for="{{tempFilePaths}}" wx:key="{{item}}">
+  <view class="img" bindtap="look" data-item="{{item}}">
+        <image mode="aspectFill" src="{{item}}"></image>
+    </view>
+    </block>
+   <view class="img" wx:if="{{tempFilePaths.length<4}}" bindtap="add">
+        <image mode="aspectFill" src="/images/add.png"></image>
+    </view>
+</view>
+ 
+
+<view class="rate" wx:if="{{!tch}}">
+    <view class="rate-item">
+        <view class="rate-tit">教师评分</view>
+        <van-rate value="{{ value }}" color="#ff6a19" size="15" bind:change="onChange1" />
+    </view>
+    <view class="rate-item">
+        <view class="rate-tit">课程评分</view>
+        <van-rate value="{{ value }}" color="#ff6a19"  size="15" bind:change="onChange2" />
+    </view>
+    <!-- <view class="rate-item">
+        <view class="rate-tit">行程安排</view>
+        <van-rate value="{{ value }}" color="#ff6a19"  size="15" bind:change="onChange3" />
+    </view> -->
+</view>
+
+<view class="submit" bindtap="submit">提交</view>
+<van-dialog id="van-dialog" />

@@ -1,0 +1,76 @@
+<!--pages/card/card.wxml-->
+<swiper class="swiper" previous-margin="50rpx" next-margin="50rpx" bindchange="change">
+    <swiper-item class="swiper-item" wx:for="{{card}}" wx:key="{{item}}">
+        <image src="{{item.back}}"></image>
+        <view class="name">
+            <view class="card-icon">
+                <image src="/images/icon/crown.png"></image>
+            </view>
+            <view class="card-name">{{item.name}}</view>
+        </view>
+        <view class="card-num">{{item.num}} 课时</view>
+        <view class="valid">有效期：{{item.valid}}个月</view>
+    </swiper-item>
+</swiper>
+<view class="container">
+    <view class="equity">
+        <view class="tit">
+            <view class="tit-l">
+                <image src="/images/src/tit-l.png"></image>
+            </view>
+            <view class="tit-c">
+                会员权益
+            </view>
+            <view class="tit-r">
+                <image src="/images/src/tit-r.png"></image>
+            </view>
+        </view>
+        <view class="eq-list">
+            <view class="eq-item">
+                <view class="eq-item-img">
+                    <image src="/images/src/sale.png"></image>
+                </view>
+                <view class="eq-item-tit">听课折扣</view>
+            </view>
+            <view class="eq-item">
+                <view class="eq-item-img">
+                    <image src="/images/src/act.png"></image>
+                </view>
+                <view class="eq-item-tit">会员活动</view>
+            </view>
+            <view class="eq-item">
+                <view class="eq-item-img">
+                    <image src="/images/src/equ.png"></image>
+                </view>
+                <view class="eq-item-tit">更多特权</view>
+            </view>
+        </view>
+    </view>
+    <view class="equity bt">
+        <view class="tit">
+            <view class="tit-l">
+                <image src="/images/src/tit-l.png"></image>
+            </view>
+            <view class="tit-c">
+                超值礼包
+            </view>
+            <view class="tit-r">
+                <image src="/images/src/tit-r.png"></image>
+            </view>
+        </view>
+        <view class="card-info">
+            <view class="info-item">
+                <view>{{card[index].num}}课时套餐</view>
+                <view>￥{{card[index].price/card[index].num}}/课时</view>
+            </view>
+            <view class="info-item">
+                <view>超长有效期</view>
+                <view>{{card[index].valid}}个月</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="bottom">
+    <button class="buy" bindtap="buy" data-id="{{card[index].id}}">￥{{card[index].price}} 开通{{card[index].name}}</button>
+</view>

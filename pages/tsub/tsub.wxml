@@ -1,0 +1,33 @@
+<!--pages/tsub/tsub.wxml-->
+<import src="/templates/sublist/sublist.wxml" />
+<van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="待上课">
+        <view class="container">
+            <block wx:if="{{list1.length>0}}">
+                <view class="list" wx:for="{{list1}}" wx:key="{{item}}" bindtap="goDetail" data-id="{{item.id}}">
+                    <template is="tchclass" data="{{item}}" />
+                </view>
+            </block>
+            <view class="nodata" wx:else>暂无数据</view>
+        </view>
+    </van-tab>
+    <van-tab title="已结束">
+        <view class="container">
+
+            <block wx:if="{{list2.length>0}}">
+                <view class="list" wx:for="{{list2}}" wx:key="{{item}}" bindtap="goDetail" data-id="{{item.id}}">
+                    <template is="tchclass" data="{{item}}" />
+                </view>
+            </block>
+            <view class="nodata" wx:else>暂无数据</view>
+        </view>
+    </van-tab>
+</van-tabs>
+<view style="height:200rpx;"></view>
+
+<van-tabbar active="{{ tab_a }}" bind:change="tabChange" active-color="#4b72a4">
+    <van-tabbar-item wx:for="{{tablist}}" wx:key="{{item}}">
+        <image slot="icon" src="{{ item.icon }}" mode="aspectFit" />
+        <image slot="icon-active" src="{{ item.iactive }}" mode="aspectFit" /> {{item.text}}
+    </van-tabbar-item>
+</van-tabbar>

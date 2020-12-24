@@ -1,0 +1,11 @@
+{
+        "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "van-tab": "/dist/re-tab/index",
+    "van-tabs": "/dist/re-tabs/index",
+    "lead": "/components/lead/lead",
+    "newgift": "/components/newgift/newgift",
+    "check": "/components/check/check",
+    "banner":"/components/banner/index"
+  }
+}

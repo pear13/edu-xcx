@@ -1,0 +1,60 @@
+/* components/lead/lead.wxss */
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+
+.icon {
+    width: 750rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220rpx;
+}
+
+.icon image {
+    width: 177rpx;
+    height: 220rpx;
+}
+
+.tit {
+    font-size: 48rpx;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+    line-height: 67rpx;
+    margin-top: 60rpx;
+}
+
+.info {
+    margin-top: 20rpx;
+    width: 521rpx;
+    height: 216rpx;
+    font-size: 28rpx;
+    font-family: PingFangSC-Medium, PingFang SC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 1);
+    line-height: 54rpx;
+    text-align: center;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 750rpx;
+    position: fixed;
+    top: 218rpx;
+    z-index: 999999;
+}

@@ -1,0 +1,58 @@
+<!-- 邀请好友列表 -->
+<template name="friend">
+    <view class="list-item" wx:for="{{list}}" wx:key="{{item}}" bindtap="look" data-index="{{index}}">
+        <view class="left">
+            <view class="avatar">
+                <image src="{{item.avatar}}"></image>
+            </view>
+            <view class="info">
+                <view class="info-tit">
+                    <text class="info-name">{{item.name}}</text> {{item.sex?'男':'女'}} | {{item.age}} | {{item.ocp_display}}
+                </view>
+                <view class="info-sign">
+                    <view class="info-icon">
+                        <image src="/images/icon/sign.png"></image>
+                    </view>
+                    <view class="sign">{{item.sign}}</view>
+                </view>
+            </view>
+        </view>
+    <view class="contant act" wx:if="{{!item.send}}" data-index="{{index}}" data-id="{{item.id}}" catchtap="seed">发出邀请</view>
+         <view class="contant " wx:else>已邀请</view>
+    </view>
+</template>
+
+<!-- 邀请好友 -->
+<template name="team">
+    <view class="list-item" wx:for="{{list}}" wx:key="{{item}}" bindtap="look" data-index="{{index}}">
+        <view class="left">
+            <view class="avatar">
+                <image src="{{item.parnter.avatar}}"></image>
+            </view>
+            <view class="info">
+                <view class="info-tit">
+                    <text class="info-name team-b">{{item.parnter.wx_name}}</text> 
+                </view>
+                <view class="info-signs">
+                    <view class="info-icon">
+                        <image src="/images/icon/sign.png"></image>
+                    </view>
+                    <view class="sign {{item.task1?'yi':'wei'}}">任务一：{{item.task1?'已完成':'未完成'}}</view>
+                </view>
+                      <view class="info-signs">
+                    <view class="info-icon">
+                        <image src="/images/icon/sign.png"></image>
+                    </view>
+                    <view class="sign {{item.task2?'yi':'wei'}}">任务二：{{item.task2?'已完成':'未完成'}}</view>
+                </view>
+                      <view class="info-signs">
+                    <view class="info-icon">
+                        <image src="/images/icon/sign.png"></image>
+                    </view>
+                    <view class="sign {{item.task3?'yi':'wei'}}">任务三：{{item.task3?'已完成':'未完成'}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="money" data-index="{{index}}" catchtap="seed">+{{item.money}}</view>
+    </view>
+</template>

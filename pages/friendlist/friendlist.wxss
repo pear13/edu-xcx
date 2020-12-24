@@ -1,0 +1,153 @@
+/* pages/friendlist/friendlist.wxss */
+@import "/templates/friend/friend.wxss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+.rule-v{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 30rpx;
+}
+
+.register-rule {
+    /* position: relative;
+    left: 50%; */
+    height: 48rpx;
+    width: 96rpx;
+    background: #000000;
+    border: 2rpx solid #fff;
+    color: #ffffff;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24rpx 0 0 24rpx;
+    opacity: 0.3;
+    top: 48rpx;
+    right: 0;
+}
+.bottom {
+    width: 690rpx;
+    height: 90rpx;
+    background-color: #2f72c9;
+    border-radius: 45rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 46rpx;
+    font-size: 30rpx;
+    color: #fff;
+}
+
+.register_success {
+    width: 94%;
+    height: 800rpx;
+    overflow: hidden;
+    z-index: 2222;
+    position: fixed;
+    left: 3%;
+    top: 110rpx;
+    border-radius: 8rpx;
+    padding-bottom: 96rpx;
+}
+
+.register_success image {
+    position: absolute;
+    z-index: 3333;
+}
+.register_bac {
+    width: 80%;
+    height: 300rpx;
+    background: #fff;
+    position: absolute;
+    top: 336rpx;
+    left: 10%;
+    z-index: 4444;
+}
+
+.register_font {
+    z-index: 5555;
+    color: #353535;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30rpx;
+}
+
+.zhidaolo {
+    height: 64rpx;
+    width: 320rpx;
+    background: #ff4544;
+    margin: 42rpx auto;
+    z-index: 9999;
+    border-radius: 32rpx;
+}
+
+.zhidaolo view {
+    color: #fff;
+    font-size: 15px;
+    height: 64rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hotbag{
+  position: absolute;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  overflow: hidden;
+  bottom: 30rpx;
+  right: 27rpx;
+}
+.register_rule {
+    width: 80%;
+    overflow: hidden;
+    background: #fff;
+    z-index: 9999;
+    position: fixed;
+    left: 10%;
+    top: 288rpx;
+    border-radius: 8rpx;
+    padding-bottom: 96rpx;
+
+}
+
+.rule {
+    color: #353535;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 56rpx 0 44rpx 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rule-detail {
+    margin: 0 32rpx;
+    color: #353535;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    right: 32rpx;
+    top: 28rpx;
+}
